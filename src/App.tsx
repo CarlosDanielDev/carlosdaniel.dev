@@ -1,7 +1,14 @@
 import React from 'react';
+import { Routes } from './routes';
+import GlobalStyles from './styles/global';
 
 interface AppProps {}
 
 export const App: React.FC<AppProps> = () => {
-  return <h1 style={{ fontFamily: 'sans-serif' }}>Olá, eu sou Carlos Daniel!, <br/>logo logo vai ter um site aqui 😁</h1>
+	return (
+		<>
+			<Routes />
+			<GlobalStyles />
+		</>
+	);
 };
