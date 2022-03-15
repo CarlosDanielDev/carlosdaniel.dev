@@ -4,7 +4,8 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+		"copy:webconfig": "cp web.config dist",
+    "build": "tsc && vite build && npm run copy:webconfig",
     "preview": "vite preview"
   },
   "dependencies": {
