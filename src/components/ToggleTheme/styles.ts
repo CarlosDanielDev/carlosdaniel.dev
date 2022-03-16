@@ -11,13 +11,20 @@ export const Container = styled.button`
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	box-shadow: ${({ theme }) => theme.typography.shadow};
 
 	&:hover {
 		background: ${({ theme }) => theme.typography.backgroundHover};
-		box-shadow: ${({ theme }) => theme.typography.shadow};
 	}
 
 	svg {
 		stroke: ${({ theme }) => theme.typography.secondary};
+	}
+
+	@media (max-width: 700px) {
+		position: absolute;
+		bottom: 50px;
+		right: 16px;
+		border: 1px solid ${({ theme }) => theme.typography.backgroundHover};
 	}
 `;
