@@ -23,7 +23,7 @@ export const Container = styled.button`
 
 	@media (max-width: 700px) {
 		position: absolute;
-		bottom: 50px;
+		bottom: 24px;
 		right: 16px;
 		border: 1px solid ${({ theme }) => theme.typography.backgroundHover};
 	}
