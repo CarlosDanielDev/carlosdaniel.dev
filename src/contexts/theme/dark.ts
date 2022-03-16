@@ -10,5 +10,6 @@ export const dark = {
 		textColorPrimary: colors.white,
 		secondary: colors.manatee,
 		placeholder: colors.sonicSilver,
+		shadow: '',
 	},
 };

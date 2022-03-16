@@ -1,10 +1,10 @@
 import React from 'react';
-import { ThemeProvider } from 'src/contexts';
+import { MobileProvider, Theme } from 'src/contexts';
 
 interface RootProviderProps {}
 
 export const RootProvider: React.FC<RootProviderProps> = ({ children }) => {
-	const providers = [ThemeProvider];
+	const providers = [Theme, MobileProvider];
 
 	return (
 		<>
