@@ -16,6 +16,7 @@ export const Disclaimer = styled.div`
 	background: ${({ theme }) => theme.typography.backgroundHover};
 	border-radius: 15px;
 	padding: 20px;
+	box-shadow: ${({ theme }) => theme.typography.shadow};
 `;
 
 export const Paragraph = styled.p`
