@@ -43,6 +43,12 @@ export const LinkNav = styled(NavLink)<NavLinkProps>`
 	border-radius: 5px;
 	transition: background 0.3s ease-in;
 
+	&.active {
+		background: ${({ theme }) => theme.typography.primary};
+		color: ${({ theme }) => theme.typography.textColorPrimary};
+		box-shadow: ${({ theme }) => theme.typography.shadow};
+	}
+
 	&:hover {
 		box-shadow: ${({ theme }) => theme.typography.shadow};
 		background: ${({ theme }) => theme.typography.backgroundHover};
