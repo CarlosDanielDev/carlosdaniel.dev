@@ -10,7 +10,7 @@ export const Box = styled.div`
 
 export const Letter = styled.h1`
 	font-size: 2.4rem;
-	font-weight: 900;
+	font-weight: 400;
 	color: ${({ theme }) => theme.typography.title};
 	display: block;
 	padding: 8px;
