@@ -11,7 +11,7 @@ export const Container = styled.button`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	box-shadow: ${({ theme }) => theme.typography.shadow};
+	/* box-shadow: ${({ theme }) => theme.typography.shadow}; */
 
 	&:hover {
 		background: ${({ theme }) => theme.typography.backgroundHover};
@@ -22,9 +22,10 @@ export const Container = styled.button`
 	}
 
 	@media (max-width: 700px) {
-		position: absolute;
-		bottom: 24px;
-		right: 16px;
-		border: 1px solid ${({ theme }) => theme.typography.backgroundHover};
+		width: 100%;
+
+		&:hover {
+			background: transparent;
+		}
 	}
 `;
