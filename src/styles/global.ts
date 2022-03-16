@@ -19,6 +19,7 @@ export default createGlobalStyle`
   body {
     font-size: 1.6rem;
 		background: ${({ theme }) => theme.typography.background};
+		transition: background 0.3s ease-in;
   }
 
 	select, input {

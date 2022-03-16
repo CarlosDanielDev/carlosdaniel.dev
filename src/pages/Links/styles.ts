@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
 export const Picture = styled.img`
 	width: 124px;
 	height: 124px;
-	transition: all 0.5s ease-out;
+	transition: all 0.3s ease-out;
 `;
 
 export const PersonalInfoContainer = styled.div`
