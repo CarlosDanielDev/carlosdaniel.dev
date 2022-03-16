@@ -59,15 +59,28 @@ export const ListItemLink = styled.li`
 				stroke: ${({ theme }) => theme.colors.white};
 			}
 		}
+
+		&:last-child {
+			a {
+				svg {
+					fill: ${({ theme }) => theme.colors.white};
+				}
+			}
+		}
 	}
 `;
 
 export const Link = styled.a`
 	text-decoration: none;
 	color: transparent;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
 
 	svg {
 		stroke: ${({ theme }) => theme.colors.black};
+
 		transition: stroke 0.3s ease-out;
 	}
 `;

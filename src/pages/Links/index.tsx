@@ -7,6 +7,7 @@ import {
 	Mail,
 	GitHub,
 } from 'react-feather';
+import { FaWhatsapp } from 'react-icons/fa';
 import * as S from './styles';
 
 interface LinksProps {}
@@ -15,9 +16,10 @@ enum LinksMedia {
 	INSTAGRAM = 'https://www.instagram.com/carlosdaniel.dev/',
 	PICTURE = 'https://i.imgur.com/4edHzS1.png',
 	LINKEDIN = 'https://www.linkedin.com/in/carlos-daniel-70733b190/',
-	FACEBOOK = '',
+	FACEBOOK = 'https://www.facebook.com/profile.php?id=100008778948740',
 	GMAIL = 'mailto:contato@carlosdaniel.dev',
 	GITHUB = 'https://github.com/CarlosDanielDev',
+	WHATSAPP = 'tel:+5594991041763',
 }
 
 export const Links: React.FC<LinksProps> = () => (
@@ -52,6 +54,11 @@ export const Links: React.FC<LinksProps> = () => (
 				<S.ListItemLink>
 					<S.Link href={LinksMedia.GMAIL} target="_blank">
 						<Mail />
+					</S.Link>
+				</S.ListItemLink>
+				<S.ListItemLink>
+					<S.Link href={LinksMedia.WHATSAPP}>
+						<FaWhatsapp color={'#000'} size={24} />
 					</S.Link>
 				</S.ListItemLink>
 			</S.ListLinks>
