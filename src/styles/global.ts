@@ -39,6 +39,7 @@ export default createGlobalStyle`
 	.active {
 		background: ${({ theme }) => theme.typography.backgroundHover};
 		color: ${({ theme }) => theme.typography.title};
+		box-shadow: ${({ theme }) => theme.typography.shadow};
 	}
 
 `;
