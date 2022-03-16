@@ -19,7 +19,7 @@ enum LinksMedia {
 	FACEBOOK = 'https://www.facebook.com/profile.php?id=100008778948740',
 	GMAIL = 'mailto:contato@carlosdaniel.dev',
 	GITHUB = 'https://github.com/CarlosDanielDev',
-	WHATSAPP = 'tel:+5594991041763',
+	WHATSAPP = 'https://wa.me/5594991041763',
 }
 
 export const Links: React.FC<LinksProps> = () => (
@@ -58,7 +58,7 @@ export const Links: React.FC<LinksProps> = () => (
 				</S.ListItemLink>
 				<S.ListItemLink>
 					<S.Link href={LinksMedia.WHATSAPP}>
-						<FaWhatsapp color={'#000'} size={24} />
+						<FaWhatsapp color="#000" size={24} />
 					</S.Link>
 				</S.ListItemLink>
 			</S.ListLinks>

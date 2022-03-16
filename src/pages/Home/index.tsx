@@ -1,7 +1,7 @@
 import React from 'react';
 import { CenteredContainer } from 'components';
-import * as S from './styles';
 import { Link } from 'react-router-dom';
+import * as S from './styles';
 
 interface HomeProps {}
 
