@@ -10,6 +10,12 @@ export default createGlobalStyle`
     box-sizing: border-box;
     font-family: 'Roboto';
 		font-display: block;
+		
+		&::-webkit-scrollbar {
+			display: none;
+		}
+		-ms-overflow-style: none;
+		scrollbar-width: none;
   }
 
   html {
@@ -36,11 +42,4 @@ export default createGlobalStyle`
     background: transparent;
     cursor: pointer;
   }
-
-	.active {
-		background: ${({ theme }) => theme.typography.backgroundHover};
-		color: ${({ theme }) => theme.typography.title};
-		box-shadow: ${({ theme }) => theme.typography.shadow};
-	}
-
 `;
