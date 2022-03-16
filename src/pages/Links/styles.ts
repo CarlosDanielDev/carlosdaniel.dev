@@ -62,6 +62,10 @@ export const ListItemLink = styled.li`
 			}
 		}
 	}
+
+	&:hover {
+		border: 2px solid ${({ theme }) => theme.typography.primary};
+	}
 `;
 
 export const Link = styled.a`
