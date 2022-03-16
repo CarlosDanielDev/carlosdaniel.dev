@@ -9,9 +9,8 @@ export const Box = styled.div`
 `;
 
 export const Letter = styled.h1`
-	font-size: 1.6rem;
+	font-size: 2.4rem;
 	font-weight: 900;
-	background-color: ${({ theme }) => theme.typography.background};
 	color: ${({ theme }) => theme.typography.title};
 	display: block;
 	padding: 8px;
@@ -21,5 +20,8 @@ export const Letter = styled.h1`
 	}
 	&:last-child {
 		padding: 8px 8px 8px 0;
+	}
+	@media (max-width: 400px) {
+		font-size: 1.6rem;
 	}
 `;
