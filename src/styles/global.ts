@@ -18,6 +18,7 @@ export default createGlobalStyle`
 
   body {
     font-size: 1.6rem;
+		background: ${({ theme }) => theme.typography.background};
   }
 
 	select, input {
@@ -34,5 +35,10 @@ export default createGlobalStyle`
     background: transparent;
     cursor: pointer;
   }
+
+	.active {
+		background: ${({ theme }) => theme.typography.backgroundHover};
+		color: ${({ theme }) => theme.typography.title};
+	}
 
 `;
