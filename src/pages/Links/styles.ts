@@ -5,11 +5,13 @@ export const Wrapper = styled.div`
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	transition: all 0.3s ease-out;
 `;
 
 export const Picture = styled.img`
 	width: 124px;
 	height: 124px;
+	transition: all 0.5s ease-out;
 `;
 
 export const PersonalInfoContainer = styled.div`
@@ -27,11 +29,12 @@ export const Title = styled.a`
 	text-decoration: none;
 	cursor: pointer;
 	user-select: none;
-	color: ${({ theme }) => theme.colors.black};
+	color: ${({ theme }) => theme.typography.title};
 `;
 
 export const Caption = styled.h2`
 	font-size: 1.4rem;
+	color: ${({ theme }) => theme.typography.secondary};
 	margin-top: 12px;
 `;
 
@@ -45,26 +48,17 @@ export const ListItemLink = styled.li`
 	display: flex;
 	justify-content: center;
 	padding: 5px;
-	border: 1px solid ${({ theme }) => theme.colors.black};
 	border-radius: 5px;
 	margin-bottom: 16px;
 	cursor: pointer;
-	background: ${({ theme }) => theme.colors.white};
+	background: ${({ theme }) => theme.typography.backgroundHover};
 	transition: background 0.3s ease-out;
+	box-shadow: ${({ theme }) => theme.typography.shadow};
 
-	&:hover {
-		background: ${({ theme }) => theme.colors.black};
+	&:last-child {
 		a {
 			svg {
-				stroke: ${({ theme }) => theme.colors.white};
-			}
-		}
-
-		&:last-child {
-			a {
-				svg {
-					fill: ${({ theme }) => theme.colors.white};
-				}
+				fill: ${({ theme }) => theme.typography.title};
 			}
 		}
 	}
@@ -76,10 +70,11 @@ export const Link = styled.a`
 	width: 100%;
 	height: 100%;
 	display: flex;
+	align-items: center;
 	justify-content: center;
 
 	svg {
-		stroke: ${({ theme }) => theme.colors.black};
+		stroke: ${({ theme }) => theme.typography.title};
 
 		transition: stroke 0.3s ease-out;
 	}

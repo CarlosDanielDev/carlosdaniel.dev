@@ -1,5 +1,5 @@
 import React from 'react';
-import { CenteredContainer } from 'components';
+import { CenteredContainer, Header } from 'components';
 import {
 	Instagram,
 	Linkedin as In,
@@ -24,41 +24,46 @@ enum LinksMedia {
 
 export const Links: React.FC<LinksProps> = () => (
 	<CenteredContainer>
+		<Header />
 		<S.Wrapper>
 			<S.PersonalInfoContainer>
 				<S.Picture src={LinksMedia.PICTURE} />
-				<S.Title href={LinksMedia.INSTAGRAM}>@carlosdaniel.dev</S.Title>
-				<S.Caption>Software developer</S.Caption>
+				<S.Title title="Carlos Daniel Dev" href={LinksMedia.INSTAGRAM}>
+					@carlosdaniel.dev
+				</S.Title>
+				<S.Caption title="Desenvolvedor de software">
+					Software developer
+				</S.Caption>
 			</S.PersonalInfoContainer>
 			<S.ListLinks>
-				<S.ListItemLink>
+				<S.ListItemLink title="github">
 					<S.Link href={LinksMedia.GITHUB} target="_blank">
 						<GitHub />
 					</S.Link>
 				</S.ListItemLink>
-				<S.ListItemLink>
+				<S.ListItemLink title="instagram">
 					<S.Link href={LinksMedia.INSTAGRAM} target="_blank">
 						<Instagram />
 					</S.Link>
 				</S.ListItemLink>
-				<S.ListItemLink>
+				<S.ListItemLink title="linkedin">
 					<S.Link href={LinksMedia.LINKEDIN} target="_blank">
 						<In />
 					</S.Link>
 				</S.ListItemLink>
-				<S.ListItemLink>
+				<S.ListItemLink title="facebook">
 					<S.Link href={LinksMedia.FACEBOOK} target="_blank">
 						<Facebook />
 					</S.Link>
 				</S.ListItemLink>
-				<S.ListItemLink>
+				<S.ListItemLink title="email">
 					<S.Link href={LinksMedia.GMAIL} target="_blank">
 						<Mail />
 					</S.Link>
 				</S.ListItemLink>
-				<S.ListItemLink>
+				<S.ListItemLink title="whatsapp">
 					<S.Link href={LinksMedia.WHATSAPP}>
-						<FaWhatsapp color="#000" size={24} />
+						<FaWhatsapp size={24} />
 					</S.Link>
 				</S.ListItemLink>
 			</S.ListLinks>
