@@ -14,7 +14,7 @@ export const Letter = styled.h1`
 	color: ${({ theme }) => theme.typography.title};
 	display: block;
 	padding: 8px;
-	font-family: 'Pacifico', cursive;
+	font-family: 'Pacifico';
 	&:first-child {
 		padding: 8px 0 8px 8px;
 	}
