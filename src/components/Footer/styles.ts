@@ -7,10 +7,11 @@ export const Container = styled.footer`
 	justify-content: center;
 	background: ${({ theme }) => theme.typography.backgroundHover};
 	box-shadow: ${({ theme }) => theme.typography.shadow};
+	width: 100%;
 
 	@media (min-width: ${breakpointLandscape}px) {
 		display: flex;
-
+		position: absolute;
 		height: 70px;
 		bottom: 0;
 	}
