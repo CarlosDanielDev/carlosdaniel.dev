@@ -28,6 +28,9 @@ export const de = {
 				links: 'Linkseite',
 				tools: '',
 			},
+			timer: {
+				message: 'kommt bald ...',
+			},
 		},
 	},
 };

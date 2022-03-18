@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Watch } from 'react-feather';
+import { useTranslation } from 'react-i18next';
 import { calculateTimeLeft } from 'src/utils';
 import * as S from './styles';
 
 interface ToDoListProps {}
 
 export const ToDoList: React.FC<ToDoListProps> = () => {
+	const { t } = useTranslation();
 	const [time, setTime] = useState({
 		days: 0,
 		hours: 0,
@@ -33,7 +35,7 @@ export const ToDoList: React.FC<ToDoListProps> = () => {
 				<S.Span>:</S.Span>
 				<S.Span>{String(time.seconds).padStart(2, '0')}</S.Span>
 			</S.TimeContainer>
-			<S.Caption>volte logo...</S.Caption>
+			<S.Caption>{t('components.timer.message')}</S.Caption>
 		</S.Container>
 	);
 };

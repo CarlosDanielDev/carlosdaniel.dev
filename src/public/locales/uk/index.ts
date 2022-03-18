@@ -28,6 +28,9 @@ export const uk = {
 				links: 'Сторінка посилань',
 				tools: '',
 			},
+			timer: {
+				message: 'незабаром...',
+			},
 		},
 	},
 };

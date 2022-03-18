@@ -28,6 +28,9 @@ export const ru = {
 				links: 'Страница ссылок',
 				tools: '',
 			},
+			timer: {
+				message: 'вскоре ...',
+			},
 		},
 	},
 };

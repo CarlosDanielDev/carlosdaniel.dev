@@ -28,6 +28,9 @@ export const fr = {
 				links: 'Page de lien',
 				tools: '',
 			},
+			timer: {
+				message: 'Bientôt disponible...',
+			},
 		},
 	},
 };

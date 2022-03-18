@@ -28,6 +28,9 @@ export const pt = {
 				links: 'Página de links',
 				tools: 'Ferramentas',
 			},
+			timer: {
+				message: 'em breve...',
+			},
 		},
 	},
 };

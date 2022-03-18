@@ -28,6 +28,9 @@ export const en = {
 				links: 'Links page',
 				tools: 'Tools',
 			},
+			timer: {
+				message: 'coming soon...',
+			},
 		},
 	},
 };
