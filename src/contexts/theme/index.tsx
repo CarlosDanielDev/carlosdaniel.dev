@@ -5,7 +5,7 @@ import {
 	useState,
 	useCallback,
 } from 'react';
-import { ThemeProvider as Provider } from 'styled-components';
+import { ThemeProvider as StyledComponentsProvider } from 'styled-components';
 import { dark } from './dark';
 import { light } from './light';
 
@@ -19,12 +19,12 @@ interface Context {
 export const ThemeContext = createContext({} as Context);
 
 export const Theme: React.FC = ({ children }) => {
-	const [currentTheme, setCurrentTheme] = useState<ThemeOption>(dark);
+	const INITIAL_THEME = dark;
+	const [currentTheme, setCurrentTheme] = useState<ThemeOption>(INITIAL_THEME);
 
 	const toggleTheme = useCallback(() => {
-		console.log({ currentTheme });
 		setCurrentTheme(state => (state?.title === 'dark' ? light : dark));
-	}, [currentTheme]);
+	}, []);
 
 	const value = useMemo(
 		() => ({ currentTheme, toggleTheme }),
@@ -34,7 +34,9 @@ export const Theme: React.FC = ({ children }) => {
 		<ThemeContext.Provider value={value}>
 			<ThemeContext.Consumer>
 				{context => (
-					<Provider theme={context.currentTheme}>{children}</Provider>
+					<StyledComponentsProvider theme={context.currentTheme}>
+						{children}
+					</StyledComponentsProvider>
 				)}
 			</ThemeContext.Consumer>
 		</ThemeContext.Provider>
@@ -45,7 +47,7 @@ export function useTheme() {
 	const context = useContext(ThemeContext);
 
 	if (!context) {
-		throw new Error('MobileProvider Error');
+		throw new Error('ThemeProvider Error');
 	}
 
 	return context;
