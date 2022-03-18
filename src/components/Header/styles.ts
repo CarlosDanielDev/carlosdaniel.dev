@@ -4,9 +4,17 @@ import { NavLink, NavLinkProps } from 'react-router-dom';
 export const Container = styled.header`
 	display: flex;
 	justify-content: space-between;
+	max-width: 900px;
 	width: 100%;
-	height: 56px;
-	margin-top: 8px;
+	height: 60px;
+	padding-top: 8px;
+	position: fixed;
+	background: ${({ theme }) => theme.typography.background};
+	z-index: 10;
+
+	@media (min-width: 100px) {
+		background: transparent;
+	}
 `;
 
 const Common = styled.div`
@@ -20,6 +28,7 @@ export const Left = styled(Common)`
 
 export const Right = styled(Common)`
 	justify-content: space-between;
+	position: relative;
 `;
 
 export const Nav = styled.nav`
@@ -55,7 +64,5 @@ export const LinkNav = styled(NavLink)<NavLinkProps>`
 		color: ${({ theme }) => theme.typography.title};
 	}
 
-	&:first-child {
-		margin-right: 8px;
-	}
+	margin-right: 8px;
 `;

@@ -8,7 +8,6 @@ export const CenteredContainer = styled.div`
 	flex-direction: column;
 	margin: 0 auto;
 	padding: 0 10px;
-	height: 100vh;
 
 	@media (max-width: 800px) {
 		padding: 0;

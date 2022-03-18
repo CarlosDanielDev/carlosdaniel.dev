@@ -2,13 +2,14 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Container = styled.div`
-	position: absolute;
+	position: fixed;
 	bottom: 0;
 	width: 100%;
 	height: 50px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	background: ${({ theme }) => theme.typography.background};
 `;
 
 export const List = styled.ul`

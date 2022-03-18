@@ -40,6 +40,7 @@ export const Caption = styled.h2`
 
 export const ListLinks = styled.ul`
 	list-style: none;
+	margin-bottom: 80px;
 `;
 
 export const ListItemLink = styled.li`

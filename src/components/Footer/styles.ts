@@ -11,7 +11,7 @@ export const Container = styled.footer`
 
 	@media (min-width: ${breakpointLandscape}px) {
 		display: flex;
-		position: absolute;
+		position: fixed;
 		height: 70px;
 		bottom: 0;
 	}

@@ -1,14 +1,15 @@
 import React from 'react';
-import { Home, Link as LinkIcon } from 'react-feather';
-import { Logo, ToggleTheme } from 'components';
+import { Home, Link as LinkIcon, Tool as ToolIcon } from 'react-feather';
+import { useTranslation } from 'react-i18next';
+import { Logo, ToggleTheme, FlagSelect, BottomMenu } from 'components';
 import { useMobile } from 'src/contexts';
 import * as S from './styles';
-import { BottomMenu } from '../BottomMenu';
 
 interface HeaderProps {}
 
 export const Header: React.FC<HeaderProps> = () => {
 	const { isMobile } = useMobile();
+	const { t } = useTranslation();
 	return (
 		<>
 			<S.Container>
@@ -19,16 +20,20 @@ export const Header: React.FC<HeaderProps> = () => {
 					{!isMobile && (
 						<>
 							<S.Nav>
-								<S.LinkNav to="/">
+								<S.LinkNav to="/" title={t('components.header.home')}>
 									<Home size={24} />
 								</S.LinkNav>
-								<S.LinkNav to="/links">
+								<S.LinkNav to="/links" title={t('components.header.links')}>
 									<LinkIcon size={24} />
+								</S.LinkNav>
+								<S.LinkNav to="/tools" title={t('components.header.tools')}>
+									<ToolIcon size={24} />
 								</S.LinkNav>
 							</S.Nav>
 							<ToggleTheme />
 						</>
 					)}
+					<FlagSelect />
 				</S.Right>
 			</S.Container>
 			{isMobile && <BottomMenu />}
