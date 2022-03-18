@@ -5,8 +5,9 @@ import {
 	Route,
 	Outlet,
 } from 'react-router-dom';
-import { Header, Footer, CenteredContainer } from 'components';
-import * as P from '../pages';
+import { Header, Footer, CenteredContainer, Main } from 'components';
+import * as P from 'src/pages';
+import * as T from 'src/pages/Tools/pages';
 
 interface RoutesProps {}
 
@@ -16,19 +17,28 @@ export const Routes: React.FC<RoutesProps> = () => (
 			<Route
 				path="/"
 				element={
-					<div style={{ maxHeight: '100vh' }}>
+					<>
 						<CenteredContainer>
 							<Header />
-							<Outlet />
+							<Main>
+								<Outlet />
+							</Main>
 						</CenteredContainer>
 						<Footer />
-					</div>
+					</>
 				}
 			>
 				<Route path="/" element={<P.Home />} />
+
 				<Route path="/to-japanese" element={<P.ToJapanese />} />
 				<Route path="/links" element={<P.Links />} />
+				<Route path="/tools">
+					<Route index element={<P.Tools />} />
+					<Route path="todo-list" element={<T.ToDoList />} />
+					<Route path="*" element={<P.NotFound />} />
+				</Route>
 			</Route>
+			<Route path="*" element={<P.NotFound />} />
 		</Switch>
 	</BrowserRouter>
 );
