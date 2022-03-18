@@ -6,3 +6,4 @@ export * from './BottomMenu';
 export * from './Footer';
 export * from './FlagSelect';
 export * from './Main';
+export * from './Timer';
