@@ -22,6 +22,6 @@ export const Letter = styled.h1`
 		padding: 8px 8px 8px 0;
 	}
 	@media (max-width: 500px) {
-		font-size: 1.6rem;
+		font-size: 2rem;
 	}
 `;
