@@ -7,7 +7,7 @@ interface ToDoListProps {}
 export const ToDoList: React.FC<ToDoListProps> = () => {
 	return (
 		<S.Container>
-			<Timer until="03/19" />
+			<Timer until="03/21" />
 		</S.Container>
 	);
 };
