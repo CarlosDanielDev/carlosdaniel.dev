@@ -27,7 +27,9 @@ export const Links: React.FC<LinksProps> = () => {
 	return (
 		<S.Wrapper>
 			<S.PersonalInfoContainer>
-				<S.Picture src={LinksMedia.PICTURE} />
+				<figure>
+					<S.Picture src={LinksMedia.PICTURE} />
+				</figure>
 				<S.Title title="Carlos Daniel Dev" href={LinksMedia.INSTAGRAM}>
 					@carlosdaniel.dev
 				</S.Title>
@@ -44,7 +46,7 @@ export const Links: React.FC<LinksProps> = () => {
 						<Instagram />
 					</S.Link>
 				</S.ListItemLink>
-				<S.ListItemLink title="linkedin">
+				<S.ListItemLink title="linkedIn">
 					<S.Link href={LinksMedia.LINKEDIN} target="_blank">
 						<In />
 					</S.Link>
