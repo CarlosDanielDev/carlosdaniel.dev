@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { NavLink, NavLinkProps } from 'react-router-dom';
+import { breakpointDesktop } from 'src/constants';
 
 export const Container = styled.header`
 	display: flex;
@@ -8,12 +9,10 @@ export const Container = styled.header`
 	width: 100%;
 	height: 60px;
 	padding-top: 8px;
-	position: fixed;
-	background: ${({ theme }) => theme.typography.background};
+	background: ${({ theme }) => theme.palette.background};
 	z-index: 10;
-
-	@media (min-width: 100px) {
-		background: transparent;
+	@media (min-width: ${breakpointDesktop}px) {
+		position: fixed;
 	}
 `;
 
@@ -44,7 +43,7 @@ export const LinkNav = styled(NavLink)<NavLinkProps>`
 	text-decoration: none;
 	height: 100%;
 
-	color: ${({ theme }) => theme.typography.secondary};
+	color: ${({ theme }) => theme.palette.secondary};
 	background: transparent;
 	width: 88px;
 	height: 100%;
@@ -53,15 +52,15 @@ export const LinkNav = styled(NavLink)<NavLinkProps>`
 	transition: background 0.3s ease-in;
 
 	&.active {
-		background: ${({ theme }) => theme.typography.primary};
-		color: ${({ theme }) => theme.typography.textColorPrimary};
-		box-shadow: ${({ theme }) => theme.typography.shadow};
+		background: ${({ theme }) => theme.palette.primary};
+		color: ${({ theme }) => theme.palette.textColorPrimary};
+		box-shadow: ${({ theme }) => theme.palette.shadow};
 	}
 
 	&:hover {
-		box-shadow: ${({ theme }) => theme.typography.shadow};
-		background: ${({ theme }) => theme.typography.backgroundHover};
-		color: ${({ theme }) => theme.typography.title};
+		box-shadow: ${({ theme }) => theme.palette.shadow};
+		background: ${({ theme }) => theme.palette.backgroundHover};
+		color: ${({ theme }) => theme.palette.title};
 	}
 
 	margin-right: 8px;

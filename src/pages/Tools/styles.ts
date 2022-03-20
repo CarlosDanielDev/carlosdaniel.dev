@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 
 export const Container = styled.main`
-	margin: 0 8px;
+	margin: 32px 8px;
+	height: 100vh;
 `;
 
 export const Title = styled.h1`
 	font-size: 2rem;
-	color: ${({ theme }) => theme.typography.title};
+	color: ${({ theme }) => theme.palette.title};
 	margin-bottom: 16px;
 
 	@media (min-width: 700px) {
@@ -32,16 +33,16 @@ export const Item = styled.div`
 	justify-content: center;
 	flex-direction: column;
 
-	color: ${({ theme }) => theme.typography.title};
-	box-shadow: ${({ theme }) => theme.typography.shadow};
-	background: ${({ theme }) => theme.typography.backgroundHover};
+	color: ${({ theme }) => theme.palette.title};
+	box-shadow: ${({ theme }) => theme.palette.shadow};
+	background: ${({ theme }) => theme.palette.backgroundHover};
 	border-radius: 5px;
 	margin-right: 8px;
 	margin-bottom: 8px;
 	position: relative;
 
 	&:hover {
-		border: 2px solid ${({ theme }) => theme.typography.primary};
+		border: 2px solid ${({ theme }) => theme.palette.primary};
 		.title-tool-item {
 			display: flex;
 		}
@@ -62,8 +63,8 @@ export const CaptionContainer = styled.div`
 	align-items: center;
 	justify-content: center;
 
-	box-shadow: ${({ theme }) => theme.typography.shadow};
-	background: ${({ theme }) => theme.typography.background};
+	box-shadow: ${({ theme }) => theme.palette.shadow};
+	background: ${({ theme }) => theme.palette.background};
 	border-radius: 5px;
 `;
 

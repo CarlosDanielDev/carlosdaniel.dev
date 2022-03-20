@@ -29,12 +29,12 @@ export const Title = styled.a`
 	text-decoration: none;
 	cursor: pointer;
 	user-select: none;
-	color: ${({ theme }) => theme.typography.title};
+	color: ${({ theme }) => theme.palette.title};
 `;
 
 export const Caption = styled.h2`
 	font-size: 1.4rem;
-	color: ${({ theme }) => theme.typography.secondary};
+	color: ${({ theme }) => theme.palette.secondary};
 	margin-top: 12px;
 `;
 
@@ -52,20 +52,20 @@ export const ListItemLink = styled.li`
 	border-radius: 5px;
 	margin-bottom: 16px;
 	cursor: pointer;
-	background: ${({ theme }) => theme.typography.backgroundHover};
+	background: ${({ theme }) => theme.palette.backgroundHover};
 	transition: background 0.3s ease-out;
-	box-shadow: ${({ theme }) => theme.typography.shadow};
+	box-shadow: ${({ theme }) => theme.palette.shadow};
 
 	&:last-child {
 		a {
 			svg {
-				fill: ${({ theme }) => theme.typography.title};
+				fill: ${({ theme }) => theme.palette.title};
 			}
 		}
 	}
 
 	&:hover {
-		border: 2px solid ${({ theme }) => theme.typography.primary};
+		border: 2px solid ${({ theme }) => theme.palette.primary};
 	}
 `;
 
@@ -79,7 +79,7 @@ export const Link = styled.a`
 	justify-content: center;
 
 	svg {
-		stroke: ${({ theme }) => theme.typography.title};
+		stroke: ${({ theme }) => theme.palette.title};
 
 		transition: stroke 0.3s ease-out;
 	}

@@ -1,3 +1,4 @@
+import { breakpointDesktop } from 'src/constants';
 import styled, { css } from 'styled-components';
 
 type Props = {
@@ -17,13 +18,13 @@ export const Container = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background: ${({ theme }) => theme.typography.backgroundHover};
+	background: ${({ theme }) => theme.palette.backgroundHover};
 	padding: 8px;
 	transition: 0.3s;
 	flex-direction: column;
-	box-shadow: ${({ theme }) => theme.typography.shadow};
+	box-shadow: ${({ theme }) => theme.palette.shadow};
 
-	@media (min-width: 1000px) {
+	@media (min-width: ${breakpointDesktop}px) {
 		top: 0px;
 		right: -50px;
 		position: absolute;
@@ -102,7 +103,7 @@ export const Label = styled.span`
 	-ms-user-select: none;
 	transition: 0.3s;
 
-	color: ${({ theme }) => theme.typography.title};
+	color: ${({ theme }) => theme.palette.title};
 `;
 
 export const LabelContainer = styled.div`
@@ -112,7 +113,7 @@ export const LabelContainer = styled.div`
 	justify-content: flex-start;
 	margin-left: 16px;
 
-	color: ${({ theme }) => theme.typography.title};
+	color: ${({ theme }) => theme.palette.title};
 	svg {
 		width: 24px;
 		height: 24px;

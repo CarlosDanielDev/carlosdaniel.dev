@@ -13,14 +13,14 @@ export const Disclaimer = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background: ${({ theme }) => theme.typography.backgroundHover};
+	background: ${({ theme }) => theme.palette.backgroundHover};
 	border-radius: 15px;
 	padding: 20px;
-	box-shadow: ${({ theme }) => theme.typography.shadow};
+	box-shadow: ${({ theme }) => theme.palette.shadow};
 `;
 
 export const Paragraph = styled.p`
-	color: ${({ theme }) => theme.typography.title};
+	color: ${({ theme }) => theme.palette.title};
 
 	font-size: 2rem;
 	font-weight: bold;

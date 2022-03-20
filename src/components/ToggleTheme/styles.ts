@@ -11,14 +11,13 @@ export const Container = styled.button`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	/* box-shadow: ${({ theme }) => theme.typography.shadow}; */
 
 	&:hover {
-		background: ${({ theme }) => theme.typography.backgroundHover};
+		background: ${({ theme }) => theme.palette.backgroundHover};
 	}
 
 	svg {
-		stroke: ${({ theme }) => theme.typography.secondary};
+		stroke: ${({ theme }) => theme.palette.secondary};
 	}
 
 	@media (max-width: 700px) {

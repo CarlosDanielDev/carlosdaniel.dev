@@ -11,7 +11,7 @@ export const Box = styled.div`
 export const Letter = styled.h1`
 	font-size: 2.4rem;
 	font-weight: 400;
-	color: ${({ theme }) => theme.typography.title};
+	color: ${({ theme }) => theme.palette.title};
 	display: block;
 	padding: 8px;
 	font-family: 'Pacifico';

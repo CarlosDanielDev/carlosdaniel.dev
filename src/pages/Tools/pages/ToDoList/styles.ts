@@ -7,5 +7,5 @@ export const Container = styled.div`
 	justify-content: center;
 	height: 80vh;
 
-	color: ${({ theme }) => theme.typography.title};
+	color: ${({ theme }) => theme.palette.title};
 `;

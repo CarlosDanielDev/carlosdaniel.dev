@@ -24,7 +24,7 @@ export default createGlobalStyle`
 
   body {
     font-size: 1.6rem;
-		background: ${({ theme }) => theme.typography.background};
+		background: ${({ theme }) => theme.palette.background};
 		transition: background 0.3s ease-in;
   }
 

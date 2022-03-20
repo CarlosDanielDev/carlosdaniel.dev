@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { List } from 'react-feather';
+import { CheckSquare } from 'react-feather';
 import * as S from './styles';
 
 interface ToolsProps {}
@@ -12,7 +12,7 @@ export const Tools: React.FC<ToolsProps> = () => {
 				name: 'To-Do list',
 				id: 'to-do-list',
 				route: 'todo-list',
-				icon: <List size={40} />,
+				icon: <CheckSquare size={40} />,
 			},
 		],
 		[],

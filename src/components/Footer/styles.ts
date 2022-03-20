@@ -5,20 +5,18 @@ export const Container = styled.footer`
 	display: none;
 	align-items: center;
 	justify-content: center;
-	background: ${({ theme }) => theme.typography.backgroundHover};
-	box-shadow: ${({ theme }) => theme.typography.shadow};
+	background: ${({ theme }) => theme.palette.backgroundHover};
+	box-shadow: ${({ theme }) => theme.palette.shadow};
 	width: 100%;
 
 	@media (min-width: ${breakpointLandscape}px) {
 		display: flex;
-		position: fixed;
 		height: 70px;
-		bottom: 0;
 	}
 `;
 
 export const InfoFooter = styled.span`
-	color: ${({ theme }) => theme.typography.title};
+	color: ${({ theme }) => theme.palette.title};
 	font-size: 16px;
 	font-weight: bold;
 `;

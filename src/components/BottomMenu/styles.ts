@@ -9,14 +9,14 @@ export const Container = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background: ${({ theme }) => theme.typography.background};
+	background: ${({ theme }) => theme.palette.background};
 `;
 
 export const List = styled.ul`
 	width: 100%;
 	display: flex;
 	justify-content: space-evenly;
-	border-top: 1px solid ${({ theme }) => theme.typography.secondary};
+	border-top: 1px solid ${({ theme }) => theme.palette.secondary};
 `;
 
 export const Item = styled(NavLink)`
@@ -26,12 +26,12 @@ export const Item = styled(NavLink)`
 	align-items: center;
 	justify-content: center;
 	text-decoration: none;
-	color: ${({ theme }) => theme.typography.title};
+	color: ${({ theme }) => theme.palette.title};
 	width: 100%;
 
 	&.active {
-		background: ${({ theme }) => theme.typography.primary};
-		color: ${({ theme }) => theme.typography.textColorPrimary};
+		background: ${({ theme }) => theme.palette.primary};
+		color: ${({ theme }) => theme.palette.textColorPrimary};
 
 		span {
 			display: block;

@@ -8,7 +8,7 @@ export const Container = styled.div`
 `;
 
 export const BackButton = styled.button`
-	color: ${({ theme }) => theme.typography.title};
+	color: ${({ theme }) => theme.palette.title};
 	position: fixed;
 	top: 8px;
 	left: 8px;
@@ -17,5 +17,5 @@ export const BackButton = styled.button`
 export const Title = styled.h1`
 	font-family: 'Rubik';
 	font-size: 10rem;
-	color: ${({ theme }) => theme.typography.title};
+	color: ${({ theme }) => theme.palette.title};
 `;
