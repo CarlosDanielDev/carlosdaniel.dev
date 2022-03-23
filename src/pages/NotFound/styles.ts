@@ -1,21 +1,23 @@
+import { breakpointLandscape } from 'src/constants';
 import styled from 'styled-components';
 
 export const Container = styled.div`
 	display: flex;
-	align-items: center;
+	position: relative;
 	justify-content: center;
-	height: 100vh;
+	height: 100%;
+	@media (min-width: ${breakpointLandscape}px) {
+		align-items: center;
+	}
 `;
 
 export const BackButton = styled.button`
 	color: ${({ theme }) => theme.palette.title};
 	position: fixed;
-	top: 8px;
+	top: 88px;
 	left: 8px;
-`;
-
-export const Title = styled.h1`
-	font-family: 'Rubik';
-	font-size: 10rem;
-	color: ${({ theme }) => theme.palette.title};
+	@media (min-width: ${breakpointLandscape}px) {
+		position: absolute;
+		top: 48px;
+	}
 `;

@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowLeft } from 'react-feather';
 import { useNavigate } from 'react-router-dom';
+import { TextNotFound } from 'src/components';
 import * as S from './styles';
 
 interface NotFoundProps {}
@@ -17,7 +18,7 @@ export const NotFound: React.FC<NotFoundProps> = () => {
 			<S.BackButton onClick={handleGoBack}>
 				<ArrowLeft size={40} />
 			</S.BackButton>
-			<S.Title>404</S.Title>
+			<TextNotFound size="large">404</TextNotFound>
 		</S.Container>
 	);
 };
