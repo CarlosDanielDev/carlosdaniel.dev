@@ -1,7 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
-
+	#root {
+		height: 100%;
+	}
   * {
     margin: 0;
     padding: 0;
@@ -20,12 +22,16 @@ export default createGlobalStyle`
 
   html {
     font-size: 62.5%;
+		height: 100%;
   }
 
   body {
     font-size: 1.6rem;
 		background: ${({ theme }) => theme.palette.background};
 		transition: background 0.3s ease-in;
+		height: 100%;
+    -webkit-font-smoothing: antialiased;
+
   }
 
 	select, input {
@@ -34,9 +40,6 @@ export default createGlobalStyle`
     appearance: none;
   }
 
-  body {
-    -webkit-font-smoothing: antialiased;
-  }
 
   button {
     background: transparent;
