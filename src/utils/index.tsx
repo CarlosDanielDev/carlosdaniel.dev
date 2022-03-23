@@ -20,3 +20,17 @@ export const calculateTimeLeft = (data: string) => {
 
 	return timeLeft;
 };
+
+export function parseJSON<T>(value: string | null): T | undefined {
+	try {
+		return value === 'undefined' ? undefined : JSON.parse(value ?? '');
+	} catch {
+		console.log('parsing error on', { value });
+		return undefined;
+	}
+}
+
+export const generateId = (value: string) => {
+	const formattedValue = value.toLowerCase().replaceAll(/\s/g, '');
+	return `@${formattedValue}`;
+};
