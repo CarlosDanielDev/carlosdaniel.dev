@@ -22,6 +22,8 @@ export const colors = {
 	lightSteelBlue: '#adbada',
 	crayola: '#1e5cf6',
 	violetBlue: '#7281cf',
+	red: '#FF0001',
+	darkCandyAppleRed: '#a20000',
 
 	palette02: {
 		dark: {

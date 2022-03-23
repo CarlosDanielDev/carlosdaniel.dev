@@ -13,6 +13,7 @@ export const palette = {
 			shadow:
 				'rgb(0 0 0 / 10%) 0px 1px 3px 0px, rgb(0 0 0 / 6%) 0px 1px 2px 0px',
 			fadedShadow: `0px 22px 119px 0px ${colors.outerSpace75}`,
+			error: colors.red,
 		},
 		light: {
 			background: colors.ghostWhite,
@@ -25,6 +26,7 @@ export const palette = {
 			shadow:
 				'rgb(0 0 0 / 10%) 0px 1px 3px 0px, rgb(0 0 0 / 6%) 0px 1px 2px 0px',
 			fadedShadow: `0px 22px 119px 0px ${colors.white75}`,
+			error: colors.red,
 		},
 	},
 	palette02: {
@@ -38,6 +40,7 @@ export const palette = {
 			placeholder: '',
 			shadow: '',
 			fadedShadow: '',
+			error: '',
 		},
 		light: {
 			background: '',
@@ -49,6 +52,7 @@ export const palette = {
 			placeholder: '',
 			shadow: '',
 			fadedShadow: '',
+			error: '',
 		},
 	},
 };
