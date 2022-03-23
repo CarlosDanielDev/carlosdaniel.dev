@@ -21,6 +21,10 @@ npm run dev
 
 Here you can find these code examples:
 
+Useful hooks: 
+- useEventListener
+- useLocalStorage
+
 Style:
 - `styled-components`
 - Mobile First
@@ -35,6 +39,7 @@ Contexts:
 `react-router-dom` v6 examples:
 - Nested Routes
 - Navigation
+- Dynamics Nested Routes
 
 
 ## Enjoy it :)
