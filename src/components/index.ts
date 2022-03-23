@@ -7,3 +7,5 @@ export * from './Footer';
 export * from './FlagSelect';
 export * from './Main';
 export * from './Timer';
+export * from './Form';
+export * from './TextNotFound';
