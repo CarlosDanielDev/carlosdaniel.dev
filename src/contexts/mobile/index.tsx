@@ -1,11 +1,4 @@
-import React, {
-	createContext,
-	useCallback,
-	useContext,
-	useEffect,
-	useMemo,
-	useState,
-} from 'react';
+import React from 'react';
 import { breakpointLandscape, breakpointMobile } from 'src/constants';
 
 type Context = {
@@ -13,32 +6,32 @@ type Context = {
 	isLandscape: boolean;
 };
 
-const MobileContext = createContext({} as Context);
+const MobileContext = React.createContext({} as Context);
 
 export const MobileProvider: React.FC = ({ children }) => {
 	const windowWidth = document.body.clientWidth;
 	const breakpoint = breakpointMobile;
 
-	const [isMobile, setIsMobile] = useState(() => {
+	const [isMobile, setIsMobile] = React.useState(() => {
 		return windowWidth < breakpoint;
 	});
 
-	const [isLandscape, setIsLandscape] = useState(() => {
+	const [isLandscape, setIsLandscape] = React.useState(() => {
 		return windowWidth < breakpointLandscape;
 	});
 
-	const onResizeWindow = useCallback((): void => {
+	const onResizeWindow = React.useCallback((): void => {
 		const currentWindowWidth = document.body.clientWidth;
 
 		setIsMobile(currentWindowWidth < breakpoint);
 		setIsLandscape(currentWindowWidth < breakpointLandscape);
 	}, [breakpoint]);
 
-	useEffect(() => {
+	React.useEffect(() => {
 		window.addEventListener('resize', onResizeWindow);
 	}, [onResizeWindow]);
 
-	const value = useMemo(
+	const value = React.useMemo(
 		() => ({
 			isMobile,
 			onResizeWindow,
@@ -53,7 +46,7 @@ export const MobileProvider: React.FC = ({ children }) => {
 };
 
 export const useMobile = (): Context => {
-	const context = useContext(MobileContext);
+	const context = React.useContext(MobileContext);
 
 	if (!context) {
 		throw new Error('MobileProvider Error');

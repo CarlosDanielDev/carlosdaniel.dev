@@ -1,10 +1,4 @@
-import {
-	useContext,
-	createContext,
-	useMemo,
-	useState,
-	useCallback,
-} from 'react';
+import React from 'react';
 import { ThemeProvider as StyledComponentsProvider } from 'styled-components';
 import { dark } from './dark';
 import { light } from './light';
@@ -16,17 +10,18 @@ interface Context {
 	toggleTheme: () => void;
 }
 
-export const ThemeContext = createContext({} as Context);
+export const ThemeContext = React.createContext({} as Context);
 
 export const Theme: React.FC = ({ children }) => {
 	const INITIAL_THEME = dark;
-	const [currentTheme, setCurrentTheme] = useState<ThemeOption>(INITIAL_THEME);
+	const [currentTheme, setCurrentTheme] =
+		React.useState<ThemeOption>(INITIAL_THEME);
 
-	const toggleTheme = useCallback(() => {
+	const toggleTheme = React.useCallback(() => {
 		setCurrentTheme(state => (state?.title === 'dark' ? light : dark));
 	}, []);
 
-	const value = useMemo(
+	const value = React.useMemo(
 		() => ({ currentTheme, toggleTheme }),
 		[currentTheme, toggleTheme],
 	);
@@ -44,7 +39,7 @@ export const Theme: React.FC = ({ children }) => {
 };
 
 export function useTheme() {
-	const context = useContext(ThemeContext);
+	const context = React.useContext(ThemeContext);
 
 	if (!context) {
 		throw new Error('ThemeProvider Error');
