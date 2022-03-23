@@ -11,6 +11,7 @@ export const Container = styled.header`
 	padding-top: 8px;
 	background: ${({ theme }) => theme.palette.background};
 	z-index: 10;
+	transition: background 0.3s ease-in;
 	@media (min-width: ${breakpointDesktop}px) {
 		position: fixed;
 	}
