@@ -9,9 +9,9 @@ export const Tools: React.FC<ToolsProps> = () => {
 	const data = useMemo(
 		() => [
 			{
-				name: 'To-Do list',
-				id: 'to-do-list',
-				route: 'todo-list',
+				name: 'Task list',
+				id: 'task-list',
+				route: 'task-list',
 				icon: <CheckSquare size={40} />,
 			},
 		],
