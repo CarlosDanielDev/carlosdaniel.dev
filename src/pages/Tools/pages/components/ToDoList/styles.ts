@@ -35,6 +35,7 @@ export const Submit = styled.button`
 	font-size: 1.6rem;
 	width: 42%;
 	margin-left: 16px;
+	box-shadow: ${({ theme }) => theme.palette.shadow};
 `;
 
 export const List = styled.ul`
@@ -63,11 +64,13 @@ export const Item = styled.button<ItemProps>`
 		done ? theme.palette.backgroundHover : 'transparent'};
 	&:hover {
 		background: ${({ theme }) => theme.palette.backgroundHover};
+		box-shadow: ${({ theme }) => theme.palette.shadow};
 	}
 
 	text-decoration: ${({ done, theme }) =>
 		done ? `line-through solid ${theme.palette.secondary}` : 'none'};
 	margin-bottom: 8px;
+	box-shadow: ${({ done, theme }) => (done ? theme.palette.shadow : 'none')};
 `;
 
 export const Label = styled.span`

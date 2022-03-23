@@ -36,6 +36,7 @@ export const Submit = styled.input.attrs({
 	padding: 8px;
 	font-size: 1.6rem;
 	margin-top: 16px;
+	box-shadow: ${({ theme }) => theme.palette.shadow};
 
 	&[disabled] {
 		opacity: 0.5;

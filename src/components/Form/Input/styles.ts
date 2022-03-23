@@ -13,6 +13,7 @@ export const Input = styled.input`
 	padding: 8px;
 	color: ${({ theme }) => theme.palette.title};
 	font-size: 1.6rem;
+	box-shadow: ${({ theme }) => theme.palette.shadow};
 `;
 
 export const ErrorContainer = styled.div`
