@@ -13,6 +13,7 @@ export const Container = styled.div`
 	flex-direction: column;
 	height: 100%;
 	overflow-y: auto;
+	position: relative;
 `;
 
 export const Title = styled.h2`

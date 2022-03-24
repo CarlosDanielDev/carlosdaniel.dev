@@ -1,9 +1,13 @@
 import React from 'react';
-import { ErrorInputProps, Input, TextNotFound } from 'src/components';
+import {
+	ErrorInputProps,
+	GoBackButton,
+	Input,
+	TextNotFound,
+} from 'src/components';
 import { routesTaskKeyName } from 'src/constants';
 import { useLocalStorage } from 'src/hooks';
 import { generateId } from 'src/utils';
-// import { Timer } from 'src/components';
 import * as S from './styles';
 
 export type RouteLocal = {
@@ -65,8 +69,10 @@ export const ToDoLists: React.FC<ToDoListsProps> = () => {
 
 	return (
 		<S.Container>
+			<GoBackButton />
 			<S.Title>Crie ou selecione uma área de tasks</S.Title>
 			<S.Form
+				autoComplete="off"
 				onSubmit={event => {
 					setLoading(true);
 					event.preventDefault();

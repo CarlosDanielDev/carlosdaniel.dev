@@ -5,12 +5,13 @@ import styled from 'styled-components';
 export const Container = styled.div`
 	display: flex;
 	flex-direction: column;
-	align-items: flex-start;
+	align-items: center;
 	justify-content: flex-start;
 	height: 100%;
 	color: ${({ theme }) => theme.palette.title};
 	margin: 0 8px;
 	margin-top: 32px;
+	position: relative;
 `;
 
 export const Form = styled.form`
@@ -45,8 +46,9 @@ export const Submit = styled.input.attrs({
 `;
 
 export const Title = styled.h2`
-	width: 50%;
+	width: 60%;
 	letter-spacing: 102%;
+	text-align: center;
 `;
 
 export const List = styled.ul`
@@ -57,24 +59,29 @@ export const List = styled.ul`
 	margin: 32px 0;
 
 	@media (min-width: ${breakpointLandscape}px) {
+		display: inline-flex;
 		flex-direction: row;
 		flex-wrap: wrap;
+		gap: 12px;
 		justify-content: flex-start;
 		overflow-y: scroll;
 	}
 `;
 
 export const Item = styled(Link)`
-	text-decoration: none;
-	width: 100%;
-	height: 40px;
-	margin-bottom: 8px;
-	color: ${({ theme }) => theme.palette.title};
-	font-size: 1.6rem;
-	border-radius: 5px;
+	position: relative;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	text-decoration: none;
+
+	width: 100%;
+	height: 40px;
+	margin-bottom: 8px;
+
+	color: ${({ theme }) => theme.palette.title};
+	font-size: 1.6rem;
+	border-radius: 5px;
 	background: ${({ theme }) => theme.palette.backgroundHover};
 	box-shadow: ${({ theme }) => theme.palette.shadow};
 
@@ -83,10 +90,9 @@ export const Item = styled(Link)`
 	}
 
 	@media (min-width: ${breakpointLandscape}px) {
-		width: 272px;
+		width: 286px;
 		height: 348px;
-		margin-right: 16px;
-		margin-bottom: 16px;
+		margin: 0;
 	}
 `;
 
@@ -95,4 +101,16 @@ export const EmptyStateContainer = styled.div`
 	align-items: center;
 	justify-content: center;
 	align-self: center;
+`;
+
+export const ActionsContainer = styled.div`
+	position: absolute;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	padding: 8px;
+	border: 5px;
+	background: ${({ theme }) => theme.palette.background};
 `;

@@ -1,7 +1,13 @@
 import React from 'react';
 import { CheckSquare, Square, Plus } from 'react-feather';
-import { ErrorInputProps, Input, TextNotFound } from 'src/components';
+import {
+	ErrorInputProps,
+	GoBackButton,
+	Input,
+	TextNotFound,
+} from 'src/components';
 import { dataKeyNamePreset } from 'src/constants';
+import { useHeader } from 'src/contexts';
 import { useLocalStorage } from 'src/hooks';
 import { generateId } from 'src/utils';
 import { RouteLocal } from '../../ToDoLists';
@@ -29,6 +35,7 @@ export const ToDoList: React.FC<ToDoListProps> = ({ data }) => {
 		label: '',
 	};
 	const formRef = React.useRef<HTMLFormElement>(null);
+	const { setMobileVisible } = useHeader();
 	const [error, setError] =
 		React.useState<ErrorInputProps>(INITIAL_ERROR_STATE);
 	const [toDos, setToDos] = useLocalStorage(
@@ -39,11 +46,11 @@ export const ToDoList: React.FC<ToDoListProps> = ({ data }) => {
 	const handleToggleCheckToDo = React.useCallback(
 		(toDo: ToDo) => {
 			setToDos(prevState => {
-				const filteredState = prevState.find(state => state.id === toDo.id);
-				const dataRemovedToDo = prevState.filter(state => state.id !== toDo.id);
-				if (!filteredState) return prevState;
-				const newObject = { ...filteredState, done: !filteredState?.done };
-				return [...dataRemovedToDo, newObject];
+				const data = prevState.map(item => {
+					if (item.id === toDo.id) return { ...item, done: !item.done };
+					return item;
+				});
+				return data;
 			});
 		},
 		[setToDos],
@@ -98,11 +105,15 @@ export const ToDoList: React.FC<ToDoListProps> = ({ data }) => {
 	);
 
 	React.useEffect(() => {
-		if (toDos?.length) toDos.sort((a, b) => Number(a.done) - Number(b.done));
-	}, [toDos]);
+		setMobileVisible(false);
+		return () => {
+			setMobileVisible(true);
+		};
+	}, [setMobileVisible]);
 
 	return (
 		<S.Container>
+			<GoBackButton />
 			<S.Title>{data.label}</S.Title>
 			<S.Form autoComplete="off" ref={formRef} onSubmit={onSubmit}>
 				<Input
@@ -115,7 +126,7 @@ export const ToDoList: React.FC<ToDoListProps> = ({ data }) => {
 					required
 				/>
 				<S.Submit type="submit">
-					<Plus />
+					<Plus size={32} />
 				</S.Submit>
 			</S.Form>
 			{toDos?.length !== 0 ? (
