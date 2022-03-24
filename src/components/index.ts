@@ -9,3 +9,4 @@ export * from './Main';
 export * from './Timer';
 export * from './Form';
 export * from './TextNotFound';
+export * from './GoBackButton';
