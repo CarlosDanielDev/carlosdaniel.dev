@@ -5,19 +5,22 @@ export const Container = styled.div`
 	display: flex;
 	position: relative;
 	justify-content: center;
+	align-items: center;
 	height: 100%;
+	width: 100%;
 	@media (min-width: ${breakpointLandscape}px) {
 		align-items: center;
 	}
 `;
 
-export const BackButton = styled.button`
-	color: ${({ theme }) => theme.palette.title};
+export const ContainerButtonGoBack = styled.div`
 	position: fixed;
-	top: 88px;
-	left: 8px;
+	top: 16px;
+	left: 16px;
+
 	@media (min-width: ${breakpointLandscape}px) {
-		position: absolute;
-		top: 48px;
+		max-width: 900px;
+		left: 10%;
+		right: 10%;
 	}
 `;
