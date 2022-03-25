@@ -22,6 +22,7 @@ export const en = {
 				es: 'Spanish',
 				ru: 'Russian',
 				fr: 'French',
+				ko: 'Korean',
 			},
 			header: {
 				home: 'Homepage',
