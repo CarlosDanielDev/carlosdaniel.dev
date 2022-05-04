@@ -2,7 +2,7 @@ export const es = {
 	translation: {
 		home: {
 			disclaimer:
-				'Hola, encantado de conocerte, todavía estoy construyendo esta página, mientras tanto, puedes navegar a la página de enlaces para encontrarme en las redes sociales ✌️...',
+				'Hola, encantado en conocerte, todavía estoy construyendo esta página, mientras tanto, puedes navegar en la página de enlaces para encontrarme en las redes sociales ✌️...',
 		},
 		links: {
 			jobTitle: 'Desarrollador de software',
@@ -29,7 +29,7 @@ export const es = {
 				tools: '',
 			},
 			timer: {
-				message: 'próximamente ...',
+				message: 'muy pronto ...',
 			},
 		},
 	},
