@@ -42,4 +42,11 @@ Contexts:
 - Dynamics Nested Routes
 
 
+
+## Tools
+
+- Task lists
+- Morse translator
+
+
 ## Enjoy it :)
