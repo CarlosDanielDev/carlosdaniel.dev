@@ -8,7 +8,7 @@ import {
 import { Header, Footer, CenteredContainer, Main } from 'components';
 import * as P from 'src/pages';
 import * as T from 'src/pages/Tools/pages';
-import { RouteLocal, ToDoList } from 'src/pages/Tools/pages';
+import { RouteLocal, ToDoList, MorseTranslator } from 'src/pages/Tools/pages';
 import { routesTaskKeyName } from 'src/constants';
 import { useLocalStorage } from 'src/hooks';
 
@@ -39,6 +39,7 @@ export const Routes: React.FC<RoutesProps> = () => {
 					<Route path="/links" element={<P.Links />} />
 					<Route path="/tools">
 						<Route index element={<P.Tools />} />
+						<Route path="morse" element={<MorseTranslator />} />
 						<Route path="task-list">
 							<Route index element={<T.ToDoLists />} />
 							{taskRoutes.length &&

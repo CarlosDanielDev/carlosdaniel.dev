@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { CheckSquare } from 'react-feather';
+import { CheckSquare, MoreHorizontal } from 'react-feather';
 import * as S from './styles';
 
 interface ToolsProps {}
@@ -13,6 +13,12 @@ export const Tools: React.FC<ToolsProps> = () => {
 				id: 'task-list',
 				route: 'task-list',
 				icon: <CheckSquare size={40} />,
+			},
+			{
+				name: 'Morse Translator',
+				id: 'morse-translator',
+				route: 'morse',
+				icon: <MoreHorizontal size={40} />,
 			},
 		],
 		[],
