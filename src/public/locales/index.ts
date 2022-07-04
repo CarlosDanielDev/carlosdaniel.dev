@@ -5,3 +5,4 @@ export * from './es';
 export * from './uk';
 export * from './ru';
 export * from './fr';
+export * from './ko';
