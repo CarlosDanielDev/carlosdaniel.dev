@@ -81,6 +81,7 @@ export const MorseTranslator: React.FC<MorseTranslatorProps> = () => {
 						placeholder="Type here..."
 						name="input-morse"
 						defaultValue={input}
+						x-webkit-speech
 						onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
 							clearTimeout(searchTimeout.current);
 
