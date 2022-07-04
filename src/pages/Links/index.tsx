@@ -8,13 +8,22 @@ import {
 } from 'react-feather';
 import { useTranslation } from 'react-i18next';
 import { FaWhatsapp } from 'react-icons/fa';
+import { useQuery } from 'react-query';
+import { githubApi } from 'src/services';
 import * as S from './styles';
 
 interface LinksProps {}
 
+interface GitHubResponse {
+	login: string;
+	id: number;
+	avatar_url: string;
+	html_url: string;
+	name: string;
+}
+
 enum LinksMedia {
 	INSTAGRAM = 'https://www.instagram.com/carlosdaniel.dev/',
-	PICTURE = 'https://i.imgur.com/4edHzS1.png',
 	LINKEDIN = 'https://www.linkedin.com/in/carlos-daniel-70733b190/',
 	FACEBOOK = 'https://www.facebook.com/profile.php?id=100008778948740',
 	GMAIL = 'mailto:contato@carlosdaniel.dev',
@@ -24,20 +33,28 @@ enum LinksMedia {
 
 export const Links: React.FC<LinksProps> = () => {
 	const { t } = useTranslation();
+	const { data: githubInfo } = useQuery<GitHubResponse>(
+		'@get-user-info',
+		async () => {
+			const response = await githubApi.get('/users/CarlosDanielDev');
+			return response.data;
+		},
+	);
+
 	return (
 		<S.Wrapper>
 			<S.PersonalInfoContainer>
 				<figure>
-					<S.Picture src={LinksMedia.PICTURE} />
+					<S.Picture src={githubInfo?.avatar_url} />
 				</figure>
-				<S.Title title="Carlos Daniel Dev" href={LinksMedia.INSTAGRAM}>
+				<S.Title title={githubInfo?.name} href={LinksMedia.INSTAGRAM}>
 					@carlosdaniel.dev
 				</S.Title>
 				<S.Caption title={t('links.jobTitle')}>{t('links.jobTitle')}</S.Caption>
 			</S.PersonalInfoContainer>
 			<S.ListLinks>
 				<S.ListItemLink title="github">
-					<S.Link href={LinksMedia.GITHUB} target="_blank">
+					<S.Link href={githubInfo?.html_url} target="_blank">
 						<GitHub />
 					</S.Link>
 				</S.ListItemLink>

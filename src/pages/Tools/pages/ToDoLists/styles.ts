@@ -1,17 +1,25 @@
 import { Link } from 'react-router-dom';
 import { breakpointLandscape } from 'src/constants';
+import { shake } from 'src/styles/animations';
 import styled from 'styled-components';
+
+type ListProps = {
+	size: number;
+};
 
 export const Container = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: flex-start;
-	height: 100%;
+	/* height: 100%; */
 	color: ${({ theme }) => theme.palette.title};
 	margin: 0 8px;
 	margin-top: 32px;
 	position: relative;
+	/* @media (min-width: ${breakpointLandscape}px) {
+
+	} */
 `;
 
 export const Form = styled.form`
@@ -51,48 +59,121 @@ export const Title = styled.h2`
 	text-align: center;
 `;
 
-export const List = styled.ul`
+export const List = styled.div<ListProps>`
 	width: 100%;
 	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	margin: 32px 0;
+	/* height: 300px; */
+	flex-wrap: wrap;
+	margin: 16px 0;
+	overflow: auto;
+	padding-bottom: 100px;
 
 	@media (min-width: ${breakpointLandscape}px) {
+		margin: 32px 0;
 		display: inline-flex;
-		flex-direction: row;
-		flex-wrap: wrap;
+		height: ${window.innerHeight}px;
 		gap: 12px;
 		justify-content: flex-start;
-		overflow-y: scroll;
+		padding-bottom: 380px;
 	}
 `;
 
-export const Item = styled(Link)`
+export const LinkItem = styled(Link)`
+	text-decoration: none;
+	color: ${({ theme }) => theme.palette.title};
+	min-width: 30%;
+	text-align: center;
+	padding: 4px;
+	background: ${({ theme }) => theme.palette.background};
+	border-radius: 4px;
+	margin: 4px;
+
+	&:hover {
+		border: 2px solid ${({ theme }) => theme.palette.primary};
+	}
+`;
+
+export const Item = styled.div`
 	position: relative;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	text-decoration: none;
+
+	z-index: 15;
 
 	width: 100%;
 	height: 40px;
 	margin-bottom: 8px;
 
-	color: ${({ theme }) => theme.palette.title};
 	font-size: 1.6rem;
 	border-radius: 5px;
 	background: ${({ theme }) => theme.palette.backgroundHover};
 	box-shadow: ${({ theme }) => theme.palette.shadow};
 
-	&:hover {
-		border: 2px solid ${({ theme }) => theme.palette.primary};
-	}
-
 	@media (min-width: ${breakpointLandscape}px) {
 		width: 286px;
 		height: 348px;
 		margin: 0;
+		&:hover {
+			button {
+				top: 10px;
+			}
+			div {
+				top: 10px;
+			}
+		}
+	}
+`;
+
+export const DateContainer = styled.div`
+	position: absolute;
+	left: 10px;
+	height: 100%;
+	width: auto;
+	z-index: 20;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	@media (min-width: ${breakpointLandscape}px) {
+		height: auto;
+		top: 12px;
+	}
+`;
+
+export const DateInfo = styled.span`
+	color: ${({ theme }) => theme.palette.title};
+	font-style: oblique;
+	font-size: 0.8rem;
+	line-height: 0.8rem;
+	opacity: 0.5;
+	text-transform: capitalize;
+`;
+
+export const TrashContainer = styled.button`
+	position: absolute;
+	right: 10px;
+	color: ${({ theme }) => theme.palette.title};
+	height: 100%;
+	z-index: 20;
+	width: 40px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&:hover {
+		animation-name: ${shake};
+		animation-duration: 0.8s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+		transform-origin: 50% 100%;
+	}
+
+	@media (min-width: ${breakpointLandscape}px) {
+		height: auto;
+		top: 12px;
 	}
 `;
 

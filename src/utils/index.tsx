@@ -34,3 +34,20 @@ export const generateId = (value: string) => {
 	const formattedValue = value.toLowerCase().replaceAll(/\s/g, '');
 	return `@${formattedValue}`;
 };
+
+export const dateFormatDDMMYYYY = (date: Date, lang: string) => {
+	const month = date.toLocaleString(lang, {
+		month: 'long',
+	});
+	const day = date.toLocaleString(lang, {
+		day: 'numeric',
+	});
+	const year = date.toLocaleString(lang, {
+		year: 'numeric',
+	});
+
+	const hours = date.getHours();
+	const minutes = date.getMinutes();
+
+	return `${month} ${day}, ${year}  ${hours}:${minutes}`;
+};

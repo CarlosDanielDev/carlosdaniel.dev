@@ -5,9 +5,11 @@ import {
 	Input,
 	TextNotFound,
 } from 'src/components';
-import { routesTaskKeyName } from 'src/constants';
+import { Trash } from 'react-feather';
+import { routesTaskKeyName, dataKeyNamePreset } from 'src/constants';
 import { useLocalStorage } from 'src/hooks';
-import { generateId } from 'src/utils';
+import { dateFormatDDMMYYYY, generateId } from 'src/utils';
+import { useTranslation } from 'react-i18next';
 import * as S from './styles';
 
 export type RouteLocal = {
@@ -29,11 +31,20 @@ export const ToDoLists: React.FC<ToDoListsProps> = () => {
 	const [error, setError] =
 		React.useState<ErrorInputProps>(ERROR_INITIAL_STATE);
 	const [loading, setLoading] = React.useState(false);
+	const { i18n } = useTranslation();
 
 	const [routes, setRoutes] = useLocalStorage(
 		routesTaskKeyName,
 		[] as RouteLocal[],
 	);
+
+	const removeRouteItem = (id: string) => {
+		const newRoutes = routes.filter(item => item.id !== id);
+		const item = routes.find(route => route.id === id);
+		localStorage.removeItem(`${dataKeyNamePreset}${item?.route}`);
+
+		setRoutes(newRoutes);
+	};
 
 	const checkIfRouteNameAlreadyExists = (routeName: string) => {
 		const isEqualLabel = routes.find(route => route.label === routeName);
@@ -105,11 +116,19 @@ export const ToDoLists: React.FC<ToDoListsProps> = () => {
 					value="Criar nova área de tasks"
 				/>
 			</S.Form>
-			<S.List>
+			<S.List size={routes.length}>
 				{routes.length ? (
-					routes?.map(item => (
-						<S.Item key={item.id} to={item.route}>
-							{item.label}
+					routes?.map((item: RouteLocal) => (
+						<S.Item key={item.id}>
+							<S.DateContainer>
+								<S.DateInfo>
+									{dateFormatDDMMYYYY(new Date(item.createdAt), i18n.language)}
+								</S.DateInfo>
+							</S.DateContainer>
+							<S.LinkItem to={item.route}>{item.label}</S.LinkItem>
+							<S.TrashContainer onClick={() => removeRouteItem(item.id)}>
+								<Trash size={20} />
+							</S.TrashContainer>
 						</S.Item>
 					))
 				) : (
