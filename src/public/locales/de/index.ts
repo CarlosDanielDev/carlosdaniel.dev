@@ -1,8 +1,19 @@
 export const de = {
 	translation: {
 		home: {
-			disclaimer:
-				'Hallo, schön dich hier zu treffen, aber ich baue diese Seite noch auf, in der Zwischenzeit kannst du zur Linkseite navigieren, um mich in den sozialen Medien zu finden ✌️...',
+			title: 'Carlos Daniel - Softwareentwickler',
+			whoIs: 'Wer ist Carlos Daniel?',
+			description:
+				'Carlos Daniel ist ein Softwareentwickler, der sich für Musik, Philosophie, Kung Fu und einen ausgewogenen Lebensstil begeistert.',
+			experience: 'Berufserfahrung',
+			experience1:
+				'Über 4 Jahre Erfahrung in der Entwicklung von Web- und Hybrid-Apps.',
+			experience2: 'Kenntnisse im Azure-Ökosystem.',
+			experience3: 'Experte in Softwareentwickler mit React und React Native.',
+			experience4: 'Verwendet TypeScript im täglichen Gebrauch.',
+			thanksForVisiting: 'Danke, dass du meine Website besucht hast!',
+			contact: 'Kontakt',
+			moreInfo: 'für weitere Informationen.',
 		},
 		links: {
 			jobTitle: 'Softwareentwickler',
@@ -12,7 +23,7 @@ export const de = {
 		},
 		components: {
 			footer: {
-				infoFooter: 'fertig mit ♥️ von @carlosdaniel.dev',
+				infoFooter: 'fertig mit ☕️von @carlosdaniel.dev',
 			},
 			flagLabels: {
 				pt: 'Portugiesisch',

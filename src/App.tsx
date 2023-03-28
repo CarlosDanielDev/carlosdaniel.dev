@@ -1,18 +1,17 @@
 import React from 'react';
+import { QueryClient, QueryClientProvider } from 'react-query';
 import { Routes } from './routes';
 import GlobalStyles from './styles/global';
-import { QueryClient, QueryClientProvider } from 'react-query'
 
-const queryClient = new QueryClient()
+const queryClient = new QueryClient();
 
-
-interface AppProps { }
+interface AppProps {}
 
 export const App: React.FC<AppProps> = () => {
-  return (
-    <QueryClientProvider client={queryClient}>
-      <Routes />
-      <GlobalStyles />
-    </QueryClientProvider>
-  );
+	return (
+		<QueryClientProvider client={queryClient}>
+			<Routes />
+			<GlobalStyles />
+		</QueryClientProvider>
+	);
 };

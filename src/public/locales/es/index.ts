@@ -1,8 +1,20 @@
 export const es = {
 	translation: {
 		home: {
-			disclaimer:
-				'Hola, encantado en conocerte, todavía estoy construyendo esta página, mientras tanto, puedes navegar en la página de enlaces para encontrarme en las redes sociales ✌️...',
+			title: 'Carlos Daniel - Desarrollador',
+			whoIs: '¿Quién es Carlos Daniel?',
+			description:
+				'Carlos Daniel es un desarrollador frontend apasionado por la música, la filosofía, el Kung Fu y un estilo de vida equilibrado.',
+			experience: 'Experiencia Profesional',
+			experience1:
+				'Más de 4 años de experiencia en desarrollo de aplicaciones web y híbridas.',
+			experience2: 'Conocimientos en el ecosistema de Azure.',
+			experience3:
+				'Especialista en frontend, trabajando con React y React Native.',
+			experience4: 'Usa TypeScript a diario.',
+			thanksForVisiting: '¡Gracias por visitar mi sitio!',
+			contact: 'contacto',
+			moreInfo: 'para más información.',
 		},
 		links: {
 			jobTitle: 'Desarrollador de software',
@@ -12,7 +24,7 @@ export const es = {
 		},
 		components: {
 			footer: {
-				infoFooter: 'hecho con ♥️ por @carlosdaniel.dev',
+				infoFooter: 'hecho con ☕️ por @carlosdaniel.dev',
 			},
 			flagLabels: {
 				pt: 'Portugués',

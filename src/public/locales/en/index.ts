@@ -1,8 +1,20 @@
 export const en = {
 	translation: {
 		home: {
-			disclaimer:
-				'Hi, nice to meet you here, but I`m still building this page, in the meantime you can navigate to the links page to find me on social media ✌️...',
+			title: 'Carlos Daniel - Developer',
+			whoIs: 'Who is Carlos Daniel?',
+			description:
+				'Carlos Daniel is a frontend developer passionate about music, philosophy, Kung Fu and a balanced lifestyle.',
+			experience: 'Professional Experience',
+			experience1:
+				'Over 4 years of experience with web and hybrid app development.',
+			experience2: 'Knowledge of the Azure ecosystem.',
+			experience3:
+				'Expert in frontend development, working with React and React Native.',
+			experience4: 'Uses TypeScript on a daily basis.',
+			thanksForVisiting: 'Thanks for visiting my site!',
+			contact: 'contact',
+			moreInfo: 'for more information.',
 		},
 		links: {
 			jobTitle: 'Software developer',
@@ -12,7 +24,7 @@ export const en = {
 		},
 		components: {
 			footer: {
-				infoFooter: 'made with ♥️  by @carlosdaniel.dev',
+				infoFooter: 'made with ☕️ by @carlosdaniel.dev',
 			},
 			flagLabels: {
 				pt: 'Portuguese',
