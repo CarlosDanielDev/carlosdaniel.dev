@@ -1,5 +1,5 @@
-import * as S from './styles';
 import { useTranslation } from 'react-i18next';
+import * as S from './styles';
 
 export const Daniel: React.FC = () => {
 	const { t } = useTranslation();
@@ -22,7 +22,8 @@ export const Daniel: React.FC = () => {
 			</S.Container>
 			<S.Footer>
 				<S.Paragraph>
-					{t('home.thanksForVisiting')} <S.Anchor to="/links">{t('home.contact')}</S.Anchor>{' '}
+					{t('home.thanksForVisiting')}{' '}
+					<S.Anchor to="/links">{t('home.contact')}</S.Anchor>{' '}
 					{t('home.moreInfo')}
 				</S.Paragraph>
 			</S.Footer>
