@@ -1,3 +1,7 @@
+import { calculateExperience } from "src/utils";
+
+const years = calculateExperience(2018);
+
 export const ru = {
 	translation: {
 		home: {
@@ -6,7 +10,7 @@ export const ru = {
 			description:
 				'Карлос Даниэль - разработчик интерфейсов, увлеченный музыкой, философией, Кунг Фу и здоровым образом жизни.',
 			experience: 'Опыт работы',
-			experience1: 'Более 4 лет опыта разработки веб- и гибридных приложений.',
+			experience1: `Более ${years} лет опыта разработки веб- и гибридных приложений.`,
 			experience2: 'Знание экосистемы Azure.',
 			experience3:
 				'Специалист по интерфейсам, работающий с React и React Native.',

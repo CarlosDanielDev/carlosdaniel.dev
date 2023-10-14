@@ -1,3 +1,7 @@
+import { calculateExperience } from "src/utils";
+
+const years = calculateExperience(2018);
+
 export const es = {
 	translation: {
 		home: {
@@ -7,7 +11,7 @@ export const es = {
 				'Carlos Daniel es un desarrollador frontend apasionado por la música, la filosofía, el Kung Fu y un estilo de vida equilibrado.',
 			experience: 'Experiencia Profesional',
 			experience1:
-				'Más de 4 años de experiencia en desarrollo de aplicaciones web y híbridas.',
+				`Más de ${years} años de experiencia en desarrollo de aplicaciones web y híbridas.`,
 			experience2: 'Conocimientos en el ecosistema de Azure.',
 			experience3:
 				'Especialista en frontend, trabajando con React y React Native.',

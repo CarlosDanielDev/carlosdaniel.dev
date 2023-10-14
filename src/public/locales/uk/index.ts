@@ -1,3 +1,8 @@
+import { calculateExperience } from "src/utils";
+
+const years = calculateExperience(2018);
+
+
 export const uk = {
 	translation: {
 		home: {
@@ -7,7 +12,7 @@ export const uk = {
 				'Карлос Даніель - розробник інтерфейсів, захоплений музикою, філософією, Кунг Фу та здоровим способом життя.',
 			experience: 'Досвід роботи',
 			experience1:
-				'Більше 4 років досвіду розробки веб- та гібридних додатків.',
+				`Більше ${years} років досвіду розробки веб- та гібридних додатків.`,
 			experience2: 'Знання екосистеми Azure.',
 			experience3:
 				'Спеціаліст з інтерфейсів, що працює з React та React Native.',

@@ -6,6 +6,7 @@ export const Wrapper = styled.div`
 	align-items: center;
 	justify-content: center;
 	transition: all 0.3s ease-out;
+	height: 100%;
 `;
 
 export const Picture = styled.img`

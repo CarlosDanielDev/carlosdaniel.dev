@@ -1,4 +1,9 @@
-export const en = {
+import { calculateExperience } from "src/utils";
+
+const years = calculateExperience(2018);
+
+
+export const en = {	
 	translation: {
 		home: {
 			title: 'Carlos Daniel - Developer',
@@ -7,7 +12,7 @@ export const en = {
 				'Carlos Daniel is a frontend developer passionate about music, philosophy, Kung Fu and a balanced lifestyle.',
 			experience: 'Professional Experience',
 			experience1:
-				'Over 4 years of experience with web and hybrid app development.',
+				`Over ${years} years of experience with web and hybrid app development.`,
 			experience2: 'Knowledge of the Azure ecosystem.',
 			experience3:
 				'Expert in frontend development, working with React and React Native.',

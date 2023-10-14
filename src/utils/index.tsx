@@ -51,3 +51,9 @@ export const dateFormatDDMMYYYY = (date: Date, lang: string) => {
 
 	return `${month} ${day}, ${year}  ${hours}:${minutes}`;
 };
+
+
+export function calculateExperience(startYear: number): number {
+    const currentYear = new Date().getFullYear();
+    return currentYear - startYear;
+}

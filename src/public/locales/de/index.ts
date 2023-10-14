@@ -1,3 +1,8 @@
+import { calculateExperience } from "src/utils";
+
+const years = calculateExperience(2018);
+
+
 export const de = {
 	translation: {
 		home: {
@@ -7,7 +12,7 @@ export const de = {
 				'Carlos Daniel ist ein Softwareentwickler, der sich für Musik, Philosophie, Kung Fu und einen ausgewogenen Lebensstil begeistert.',
 			experience: 'Berufserfahrung',
 			experience1:
-				'Über 4 Jahre Erfahrung in der Entwicklung von Web- und Hybrid-Apps.',
+				`Über ${years} Jahre Erfahrung in der Entwicklung von Web- und Hybrid-Apps.`,
 			experience2: 'Kenntnisse im Azure-Ökosystem.',
 			experience3: 'Experte in Softwareentwickler mit React und React Native.',
 			experience4: 'Verwendet TypeScript im täglichen Gebrauch.',
