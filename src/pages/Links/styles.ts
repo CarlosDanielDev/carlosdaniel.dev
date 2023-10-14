@@ -12,6 +12,7 @@ export const Picture = styled.img`
 	width: 124px;
 	height: 124px;
 	transition: all 0.3s ease-out;
+	border-radius: 62px;
 `;
 
 export const PersonalInfoContainer = styled.div`

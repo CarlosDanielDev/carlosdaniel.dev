@@ -5,7 +5,7 @@ export const Daniel: React.FC = () => {
 	const { t } = useTranslation();
 
 	return (
-		<>
+		<S.Wrapper>
 			<S.Header>
 				<S.Title>{t('home.title')}</S.Title>
 			</S.Header>
@@ -23,10 +23,11 @@ export const Daniel: React.FC = () => {
 			<S.Footer>
 				<S.Paragraph>
 					{t('home.thanksForVisiting')}{' '}
+					<br />
 					<S.Anchor to="/links">{t('home.contact')}</S.Anchor>{' '}
 					{t('home.moreInfo')}
 				</S.Paragraph>
 			</S.Footer>
-		</>
+		</S.Wrapper>
 	);
 };
