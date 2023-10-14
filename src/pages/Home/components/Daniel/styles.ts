@@ -16,7 +16,7 @@ export const Container = styled.div`
 		color: ${({ theme }) => theme.palette.title};
 	}
 
-	@media (max-width: 576px) {
+	@media ${({ theme }) => theme.breakpoints.desktop} {
 		padding: 10px;
 	}
 `;
@@ -26,7 +26,7 @@ export const Header = styled.header`
 	text-align: center;
 	margin-bottom: 20px;
 
-	@media (max-width: 576px) {
+	@media ${({ theme }) => theme.breakpoints.desktop} {
 		padding: 10px;
 	}
 `;
@@ -38,7 +38,7 @@ export const Title = styled.h1`
 	font-weight: bolder;
 	font-style: italic;
 
-	@media (max-width: 576px) {
+	@media ${({ theme }) => theme.breakpoints.desktop} {
 		font-size: 2em;
 		text-align: left;
 		margin-bottom: 10px;
@@ -51,7 +51,7 @@ export const Subtitle = styled.h2`
 	color: ${({ theme }) => theme.palette.title};
 	margin-top: 16px;
 
-	@media (max-width: 576px) {
+	@media ${({ theme }) => theme.breakpoints.desktop} {
 		font-size: 1.5em;
 		text-align: left;
 		margin-bottom: 20px;
@@ -62,7 +62,7 @@ export const Paragraph = styled.p`
 	line-height: 1.5;
 	margin: 0 0 20px 0;
 
-	@media (max-width: 576px) {
+	@media ${({ theme }) => theme.breakpoints.desktop} {
 		font-size: 0.8em;
 	}
 `;
@@ -74,7 +74,7 @@ export const UnorderedList = styled.ul`
 	display: flex;
 	flex-direction: column;
 
-	@media (max-width: 576px) {
+	@media ${({ theme }) => theme.breakpoints.desktop} {
 		margin-left: 20px;
 	}
 `;
@@ -85,21 +85,20 @@ export const ListItem = styled.li`
 	margin: 8px;
 	margin-left: 0;
 
-	@media (max-width: 576px) {
+	@media ${({ theme }) => theme.breakpoints.desktop} {
 		display: block;
 		margin-right: 0;
 		margin-bottom: 10px;
 	}
 `;
 
-export const Anchor = styled(NavLink)<NavLinkProps>`
-	color: ${({ theme }) => theme.palette.title};
-	margin-top: 8px;
+export const Anchor = styled.a.attrs({ as: NavLink })<NavLinkProps>`
+  color: ${({ theme }) => theme.palette.title};
+  margin-top: 8px;
 
-	&:hover {
-		color: ${({ theme }) => theme.palette.secondary};
-		text-decoration: underline;
-	}
+  &:hover {
+    color: ${({ theme }) => theme.palette.secondary};
+  }
 `;
 
 export const Footer = styled.footer`
@@ -109,7 +108,7 @@ export const Footer = styled.footer`
 	text-align: center;
 	margin-top: 20px;
 
-	@media (max-width: 576px) {
+	@media ${({ theme }) => theme.breakpoints.desktop} {
 		padding: 10px;
 	}
 `;

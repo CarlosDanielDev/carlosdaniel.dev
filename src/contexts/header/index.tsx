@@ -32,7 +32,7 @@ export const useHeader = () => {
 	const context = useContext(HeaderContext);
 
 	if (!context) {
-		throw new Error('usHeader must be used with an HeaderProvider');
+		throw new Error('useHeader must be used with an HeaderProvider');
 	}
 
 	return context;
