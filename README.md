@@ -1,5 +1,6 @@
 # carlosdaniel.dev
 
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 
 To start this project, after `git clone`, install all dependencies with this following command:
 ```bash
