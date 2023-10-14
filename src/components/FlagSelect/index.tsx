@@ -86,7 +86,7 @@ export const FlagSelect: React.FC<FlagSelectProps> = () => {
 				onClick={handleOpenSelectFlagList}
 			>
 				<S.ImageContainer>
-					<S.Flag src={active.image} />
+					<S.Flag alt="current flag" src={active.image} />
 				</S.ImageContainer>
 				<S.LabelContainer className="label-container">
 					<S.Label>{active.label}</S.Label>
@@ -116,7 +116,7 @@ export const FlagSelect: React.FC<FlagSelectProps> = () => {
 								}}
 							>
 								<S.ImageContainer>
-									<S.Flag src={flag.image} />
+									<S.Flag alt={flag.label} src={flag.image} />
 								</S.ImageContainer>
 								<S.LabelContainer className="label-container">
 									<S.Label title={flag.label}>{flag.label}</S.Label>

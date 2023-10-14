@@ -9,7 +9,7 @@ export const ToggleTheme: React.FC<ToggleThemeProps> = () => {
 	const { currentTheme, toggleTheme } = useTheme();
 
 	return (
-		<S.Container onClick={toggleTheme}>
+		<S.Container aria-label="theme switcher" onClick={toggleTheme}>
 			{currentTheme?.title === 'dark' ? <Sun size={24} /> : <Moon size={24} />}
 		</S.Container>
 	);

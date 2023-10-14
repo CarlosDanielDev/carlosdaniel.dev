@@ -6,7 +6,7 @@ type Props = {
 	enabled: boolean;
 };
 
-export const Container = styled.div`
+export const Container = styled.ul`
 	min-width: 40px;
 	min-height: 40px;
 	border-radius: 20px;
