@@ -35,7 +35,8 @@ export const Title = styled.a`
 `;
 
 export const Caption = styled.h2`
-	font-size: 1.4rem;
+	font-size: 1.6rem;
+	font-weight: 100;
 	color: ${({ theme }) => theme.palette.secondary};
 	margin-top: 12px;
 `;

@@ -37,7 +37,7 @@ export const FlagSelect: React.FC<FlagSelectProps> = () => {
 				enabled: true,
 			},
 			{
-				image: 'https://i.imgur.com/YjDLPmT.png',
+				image: 'https://i.imgur.com/TLdFiLA.png',
 				label: t('components.flagLabels.jp'),
 				code: 'jp',
 				enabled: true,
