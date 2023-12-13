@@ -37,6 +37,12 @@ export const FlagSelect: React.FC<FlagSelectProps> = () => {
 				enabled: true,
 			},
 			{
+				image: 'https://i.imgur.com/YjDLPmT.png',
+				label: t('components.flagLabels.jp'),
+				code: 'jp',
+				enabled: true,
+			},
+			{
 				image: 'https://i.imgur.com/ptCzgAo.png',
 				label: t('components.flagLabels.uk'),
 				code: 'uk',
@@ -79,12 +85,7 @@ export const FlagSelect: React.FC<FlagSelectProps> = () => {
 
 	return (
 		<S.Container>
-			<S.Item
-				enabled
-				active={isListVisible}
-				key={active.code}
-				onClick={handleOpenSelectFlagList}
-			>
+			<S.Item enabled active={isListVisible} key={active.code} onClick={handleOpenSelectFlagList}>
 				<S.ImageContainer>
 					<S.Flag alt="current flag" src={active.image} />
 				</S.ImageContainer>

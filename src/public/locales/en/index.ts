@@ -1,9 +1,8 @@
-import { calculateExperience } from "src/utils";
+import { calculateExperience } from 'src/utils';
 
 const years = calculateExperience(2018);
 
-
-export const en = {	
+export const en = {
 	translation: {
 		home: {
 			title: 'Carlos Daniel - Developer',
@@ -11,11 +10,9 @@ export const en = {
 			description:
 				'Carlos Daniel is a frontend developer passionate about music, philosophy, Kung Fu and a balanced lifestyle.',
 			experience: 'Professional Experience',
-			experience1:
-				`Over ${years} years of experience with web and hybrid app development.`,
+			experience1: `Over ${years} years of experience with web and hybrid app development.`,
 			experience2: 'Knowledge of the Azure ecosystem.',
-			experience3:
-				'Expert in frontend development, working with React and React Native.',
+			experience3: 'Expert in frontend development, working with React and React Native.',
 			experience4: 'Uses TypeScript on a daily basis.',
 			thanksForVisiting: 'Thanks for visiting my site!',
 			contact: 'contact',
@@ -39,6 +36,7 @@ export const en = {
 				es: 'Spanish',
 				ru: 'Russian',
 				fr: 'French',
+				jp: 'Japanese',
 			},
 			header: {
 				home: 'Homepage',

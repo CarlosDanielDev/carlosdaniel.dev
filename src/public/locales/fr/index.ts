@@ -1,4 +1,4 @@
-import { calculateExperience } from "src/utils";
+import { calculateExperience } from 'src/utils';
 
 const years = calculateExperience(2018);
 
@@ -10,11 +10,9 @@ export const fr = {
 			description:
 				'Carlos Daniel est un développeur frontend passionné par la musique, la philosophie, le Kung Fu et un style de vie équilibré.',
 			experience: 'Expérience professionnelle',
-			experience1:
-				`Plus de ${years} ans d'expérience dans le développement d'applications web et hybrides.`,
+			experience1: `Plus de ${years} ans d'expérience dans le développement d'applications web et hybrides.`,
 			experience2: "Connaissance de l'écosystème Azure.",
-			experience3:
-				'Expert en frontend, travaillant avec React et React Native.',
+			experience3: 'Expert en frontend, travaillant avec React et React Native.',
 			experience4: 'Utilise TypeScript au quotidien.',
 			thanksForVisiting: "Merci d'avoir visité mon site !",
 			contact: 'contact',
@@ -38,6 +36,7 @@ export const fr = {
 				es: 'Espagnol',
 				ru: 'Russe',
 				fr: 'Français',
+				jp: 'Japonais',
 			},
 			header: {
 				home: `Page d'accueil`,
