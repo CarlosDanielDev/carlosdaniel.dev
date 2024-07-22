@@ -68,7 +68,7 @@ const experiences = [
 		description: 'Desenvolvedor Mobile híbrido Sênior (03/2021 - 12/2021)',
 		projects: [
 			{
-				link: 'https://www.stix.com.br',
+				link: 'https://www.soustix.com.br',
 				name: 'Stix',
 				description:
 					'Aplicativo de cashback, desenvolvimento de novas features e manutenção do aplicativo utilizando React Native.',
@@ -110,15 +110,14 @@ export const Home: React.FC<HomeProps> = () => {
 			<S.Section>
 				<S.Title>Olá,</S.Title>
 				<S.Paragraph>
-					Meu nome é Carlos Daniel, sou desenvolvedor há {years} anos e este é o
-					meu site pessoal.
+					Meu nome é Carlos Daniel, sou desenvolvedor há {years} anos e este é o meu site pessoal.
 				</S.Paragraph>
 			</S.Section>
 
 			<S.Section>
 				<S.Paragraph>
-					Aqui abaixo você pode encontrar alguns dos meus projetos e projetos
-					que eu participei ao longo da minha carreira.
+					Aqui abaixo você pode encontrar alguns dos meus projetos e projetos que eu participei ao
+					longo da minha carreira.
 				</S.Paragraph>
 			</S.Section>
 
@@ -139,11 +138,7 @@ export const Home: React.FC<HomeProps> = () => {
 							<S.Paragraph>{experience.description}</S.Paragraph>
 							{experience.projects.map((project, index) => (
 								<S.ProjectPreview key={`${index + 1}-item`}>
-									<S.ProjectLink
-										href={project.link}
-										target="_blank"
-										rel="noopener noreferrer"
-									>
+									<S.ProjectLink href={project.link} target="_blank" rel="noopener noreferrer">
 										{project.name}
 									</S.ProjectLink>
 									<S.Paragraph>{project.description}</S.Paragraph>
