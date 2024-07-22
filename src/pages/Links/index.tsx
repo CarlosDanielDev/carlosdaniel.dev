@@ -1,13 +1,6 @@
 import React from 'react';
-import {
-	Instagram,
-	Linkedin as In,
-	Facebook,
-	Mail,
-	GitHub,
-} from 'react-feather';
+import { Instagram, Linkedin as In, Facebook, Mail, GitHub } from 'react-feather';
 import { useTranslation } from 'react-i18next';
-import { FaWhatsapp } from 'react-icons/fa';
 import { useQuery } from 'react-query';
 import { githubApi } from 'src/services';
 import * as S from './styles';
@@ -33,14 +26,11 @@ enum LinksMedia {
 
 export const Links: React.FC<LinksProps> = () => {
 	const { t } = useTranslation();
-	const { data: githubInfo } = useQuery<GitHubResponse>(
-		'@get-user-info',
-		async () => {
-			const response = await githubApi.get('/users/CarlosDanielDev');
-			console.log({ response });
-			return response.data;
-		},
-	);
+	const { data: githubInfo } = useQuery<GitHubResponse>('@get-user-info', async () => {
+		const response = await githubApi.get('/users/CarlosDanielDev');
+		console.log({ response });
+		return response.data;
+	});
 
 	return (
 		<S.Wrapper>
@@ -77,11 +67,6 @@ export const Links: React.FC<LinksProps> = () => {
 				<S.ListItemLink title="email">
 					<S.Link href={LinksMedia.GMAIL} target="_blank">
 						<Mail />
-					</S.Link>
-				</S.ListItemLink>
-				<S.ListItemLink title="whatsapp">
-					<S.Link href={LinksMedia.WHATSAPP}>
-						<FaWhatsapp size={24} />
 					</S.Link>
 				</S.ListItemLink>
 			</S.ListLinks>
