@@ -85,7 +85,12 @@ export const FlagSelect: React.FC<FlagSelectProps> = () => {
 
 	return (
 		<S.Container>
-			<S.Item enabled active={isListVisible} key={active.code} onClick={handleOpenSelectFlagList}>
+			<S.Item
+				enabled
+				active={isListVisible}
+				key={active.code}
+				onClick={handleOpenSelectFlagList}
+			>
 				<S.ImageContainer>
 					<S.Flag alt="current flag" src={active.image} />
 				</S.ImageContainer>

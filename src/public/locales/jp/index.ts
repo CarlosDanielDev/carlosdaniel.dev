@@ -12,7 +12,8 @@ export const jp = {
 			experience: '専門経験',
 			experience1: `ウェブおよびハイブリッドアプリ開発における${years}年以上の経験。`,
 			experience2: 'Azureエコシステムに関する知識。',
-			experience3: 'ReactおよびReact Nativeを使用したフロントエンド開発のエキスパート。',
+			experience3:
+				'ReactおよびReact Nativeを使用したフロントエンド開発のエキスパート。',
 			experience4: '日常的にTypeScriptを使用。',
 			thanksForVisiting: '私のサイトを訪問していただきありがとうございます！',
 			contact: '連絡先',

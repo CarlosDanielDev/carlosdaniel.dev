@@ -12,7 +12,8 @@ export const uk = {
 			experience: 'Досвід роботи',
 			experience1: `Більше ${years} років досвіду розробки веб- та гібридних додатків.`,
 			experience2: 'Знання екосистеми Azure.',
-			experience3: 'Спеціаліст з інтерфейсів, що працює з React та React Native.',
+			experience3:
+				'Спеціаліст з інтерфейсів, що працює з React та React Native.',
 			experience4: 'Використовує TypeScript у повсякденній роботі.',
 			thanksForVisiting: 'Дякуємо за відвідування нашого сайту!',
 			contact: 'контакт',

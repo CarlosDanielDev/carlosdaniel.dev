@@ -22,8 +22,7 @@ export const Daniel: React.FC = () => {
 			</S.Container>
 			<S.Footer>
 				<S.Paragraph>
-					{t('home.thanksForVisiting')}{' '}
-					<br />
+					{t('home.thanksForVisiting')} <br />
 					<S.Anchor to="/links">{t('home.contact')}</S.Anchor>{' '}
 					{t('home.moreInfo')}
 				</S.Paragraph>

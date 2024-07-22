@@ -93,12 +93,12 @@ export const ListItem = styled.li`
 `;
 
 export const Anchor = styled.a.attrs({ as: NavLink })<NavLinkProps>`
-  color: ${({ theme }) => theme.palette.title};
-  margin-top: 8px;
+	color: ${({ theme }) => theme.palette.title};
+	margin-top: 8px;
 
-  &:hover {
-    color: ${({ theme }) => theme.palette.secondary};
-  }
+	&:hover {
+		color: ${({ theme }) => theme.palette.secondary};
+	}
 `;
 
 export const Footer = styled.footer`

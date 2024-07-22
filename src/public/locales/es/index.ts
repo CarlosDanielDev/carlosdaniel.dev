@@ -12,7 +12,8 @@ export const es = {
 			experience: 'Experiencia Profesional',
 			experience1: `Más de ${years} años de experiencia en desarrollo de aplicaciones web y híbridas.`,
 			experience2: 'Conocimientos en el ecosistema de Azure.',
-			experience3: 'Especialista en frontend, trabajando con React y React Native.',
+			experience3:
+				'Especialista en frontend, trabajando con React y React Native.',
 			experience4: 'Usa TypeScript a diario.',
 			thanksForVisiting: '¡Gracias por visitar mi sitio!',
 			contact: 'contacto',

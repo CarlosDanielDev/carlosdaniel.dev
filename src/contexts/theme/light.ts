@@ -5,5 +5,5 @@ export const light = {
 	palette: palette.palette01.light,
 	breakpoints: {
 		desktop: '(max-width: 576px)',
-	}
+	},
 };

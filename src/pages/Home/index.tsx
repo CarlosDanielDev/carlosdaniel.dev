@@ -1,6 +1,6 @@
 import React from 'react';
-import * as S from './styles';
 import { calculateExperience } from 'src/utils';
+import * as S from './styles';
 
 const experiences = [
 	{
@@ -110,14 +110,15 @@ export const Home: React.FC<HomeProps> = () => {
 			<S.Section>
 				<S.Title>Olá,</S.Title>
 				<S.Paragraph>
-					Meu nome é Carlos Daniel, sou desenvolvedor há {years} anos e este é o meu site pessoal.
+					Meu nome é Carlos Daniel, sou desenvolvedor há {years} anos e este é o
+					meu site pessoal.
 				</S.Paragraph>
 			</S.Section>
 
 			<S.Section>
 				<S.Paragraph>
-					Aqui abaixo você pode encontrar alguns dos meus projetos e projetos que eu participei ao
-					longo da minha carreira.
+					Aqui abaixo você pode encontrar alguns dos meus projetos e projetos
+					que eu participei ao longo da minha carreira.
 				</S.Paragraph>
 			</S.Section>
 
@@ -138,7 +139,11 @@ export const Home: React.FC<HomeProps> = () => {
 							<S.Paragraph>{experience.description}</S.Paragraph>
 							{experience.projects.map((project, index) => (
 								<S.ProjectPreview key={`${index + 1}-item`}>
-									<S.ProjectLink href={project.link} target="_blank" rel="noopener noreferrer">
+									<S.ProjectLink
+										href={project.link}
+										target="_blank"
+										rel="noopener noreferrer"
+									>
 										{project.name}
 									</S.ProjectLink>
 									<S.Paragraph>{project.description}</S.Paragraph>
