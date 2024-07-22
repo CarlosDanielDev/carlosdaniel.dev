@@ -13,7 +13,7 @@ export const Letter = styled.h2`
 	color: ${({ theme }) => theme.palette.title};
 	display: block;
 	padding: 8px;
-	font-family: 'Pacifico';
+	/* font-family: 'Pacifico'; */
 	&:first-child {
 		padding: 8px 0 8px 8px;
 	}

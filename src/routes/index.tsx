@@ -1,11 +1,6 @@
 import React from 'react';
-import {
-	BrowserRouter,
-	Routes as Switch,
-	Route,
-	Outlet,
-} from 'react-router-dom';
-import { Header, Footer, CenteredContainer, Main } from 'components';
+import { BrowserRouter, Routes as Switch, Route, Outlet } from 'react-router-dom';
+import { Header, CenteredContainer, Main, Footer } from 'components';
 import * as P from 'src/pages';
 import * as T from 'src/pages/Tools/pages';
 import { RouteLocal, ToDoList, MorseTranslator } from 'src/pages/Tools/pages';
