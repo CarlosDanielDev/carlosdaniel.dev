@@ -1,4 +1,9 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+
+export const ThemeContainer = styled.div`
+	position: relative;
+	display: inline-block;
+`;
 
 export const Container = styled.button`
 	background: transparent;
@@ -27,4 +32,37 @@ export const Container = styled.button`
 			background: transparent;
 		}
 	}
+`;
+
+export const Dropdown = styled.div`
+	position: absolute;
+	top: 100%;
+	right: 0;
+	min-width: 160px;
+	background: ${({ theme }) => theme.palette.background};
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+	z-index: 10;
+	overflow: hidden;
+`;
+
+interface ThemeOptionProps {
+	active: boolean;
+}
+
+export const ThemeOption = styled.div<ThemeOptionProps>`
+	padding: 10px 15px;
+	cursor: pointer;
+	transition: all 0.2s ease;
+
+	&:hover {
+		background: ${({ theme }) => theme.palette.backgroundHover};
+	}
+
+	${({ active, theme }) =>
+		active &&
+		css`
+			background: ${theme.palette.primary};
+			color: ${theme.palette.textColorPrimary};
+		`}
 `;
