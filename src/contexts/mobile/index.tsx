@@ -8,7 +8,10 @@ type Context = {
 
 const MobileContext = React.createContext({} as Context);
 
-export const MobileProvider: React.FC = ({ children }) => {
+interface MobileProviderProps {
+	children?: React.ReactNode;
+}
+export const MobileProvider: React.FC<MobileProviderProps> = ({ children }) => {
 	const windowWidth = document.body.clientWidth;
 	const breakpoint = breakpointMobile;
 
