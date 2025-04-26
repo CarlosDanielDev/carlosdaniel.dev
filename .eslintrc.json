@@ -58,7 +58,16 @@
 	},
 	"settings": {
 		"import/resolver": {
-			"typescript": {}
+			"typescript": {
+				"caseSensitive": false,
+				"alwaysTryTypes": true
+			},
+			"node": {
+				"caseSensitive": false
+			}
+		},
+		"import/parsers": {
+			"@typescript-eslint/parser": [".ts", ".tsx"]
 		}
 	}
 }
