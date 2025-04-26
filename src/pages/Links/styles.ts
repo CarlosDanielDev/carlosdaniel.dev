@@ -6,7 +6,8 @@ export const Wrapper = styled.div`
 	align-items: center;
 	justify-content: center;
 	transition: all 0.3s ease-out;
-	height: 100%;
+	min-height: 80vh;
+	padding: 20px 0;
 `;
 
 export const Picture = styled.img`
@@ -43,12 +44,14 @@ export const Caption = styled.h2`
 
 export const ListLinks = styled.ul`
 	list-style: none;
-	margin-bottom: 80px;
+	margin-bottom: 40px;
+	width: 100%;
+	max-width: 300px;
 `;
 
 export const ListItemLink = styled.li`
 	height: 40px;
-	min-width: 300px;
+	width: 100%;
 	display: flex;
 	justify-content: center;
 	padding: 5px;
@@ -56,19 +59,27 @@ export const ListItemLink = styled.li`
 	margin-bottom: 16px;
 	cursor: pointer;
 	background: ${({ theme }) => theme.palette.backgroundHover};
-	transition: background 0.3s ease-out;
+	transition: all 0.3s ease-out;
 	box-shadow: ${({ theme }) => theme.palette.shadow};
+	position: relative;
+	overflow: hidden;
 
-	&:last-child {
-		a {
-			svg {
-				fill: ${({ theme }) => theme.palette.title};
-			}
+	${({ theme }) =>
+		theme.title === 'cyberpunk' &&
+		`
+		border: 1px solid ${theme.palette.accent2};
+		box-shadow: 0 0 5px ${theme.palette.accent2};
+		
+		&:hover {
+			box-shadow: 0 0 10px ${theme.palette.accent2}, 0 0 20px ${theme.palette.accent2};
 		}
-	}
+	`}
 
 	&:hover {
-		border: 2px solid ${({ theme }) => theme.palette.primary};
+		border: ${({ theme }) =>
+			theme.title !== 'cyberpunk'
+				? `2px solid ${theme.palette.primary}`
+				: 'initial'};
 	}
 `;
 
@@ -80,11 +91,22 @@ export const Link = styled.a`
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	z-index: 2;
 
 	svg {
 		stroke: ${({ theme }) => theme.palette.title};
+		transition: all 0.3s ease-out;
 
-		transition: stroke 0.3s ease-out;
+		${({ theme }) =>
+			theme.title === 'cyberpunk' &&
+			`
+			stroke: ${theme.palette.accent2};
+			filter: drop-shadow(0 0 2px ${theme.palette.accent2});
+			
+			&:hover {
+				filter: drop-shadow(0 0 5px ${theme.palette.accent2});
+			}
+		`}
 	}
 `;
 
