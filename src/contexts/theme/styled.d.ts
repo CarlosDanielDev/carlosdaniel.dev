@@ -1,8 +1,48 @@
 import 'styled-components';
-import { dark } from './dark';
 
 declare module 'styled-components' {
-	type ThemeType = typeof dark;
-
-	export interface DefaultTheme extends ThemeType {}
+	export interface DefaultTheme {
+		title: string;
+		palette: {
+			scanline: string;
+			terminal: SimpleInterpolation;
+			background: string;
+			backgroundHover: string;
+			title: string;
+			primary: string;
+			textColorPrimary: string;
+			secondary: string;
+			placeholder: string;
+			shadow: string;
+			fadedShadow?: string;
+			innerShadow?: string;
+			error: string;
+			windowBg?: string;
+			buttonFace?: string;
+			buttonHighlight?: string;
+			buttonShadow?: string;
+			buttonText?: string;
+			windowHeader?: string;
+			windowFrame?: string;
+			activeTitleText?: string;
+			accent1?: string;
+			accent2?: string;
+			accent3?: string;
+			accent4?: string;
+			glowText?: string;
+			textGlow?: string;
+			terminalText?: string;
+			terminalPrompt?: string;
+			terminalCommand?: string;
+		};
+		breakpoints: {
+			xs?: string;
+			sm?: string;
+			md?: string;
+			lg?: string;
+			xl?: string;
+			xxl?: string;
+			desktop?: string;
+		};
+	}
 }

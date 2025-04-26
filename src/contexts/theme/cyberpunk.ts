@@ -1,8 +1,8 @@
 import { palette } from './palette';
 
-export const dark = {
-	title: 'dark',
-	palette: palette.palette01.dark,
+export const cyberpunk = {
+	title: 'cyberpunk',
+	palette: palette.cyberpunk.dark,
 	breakpoints: {
 		desktop: '(max-width: 576px)',
 		xs: '480px',

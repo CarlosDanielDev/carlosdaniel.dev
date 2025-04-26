@@ -10,7 +10,7 @@ export const colors = {
 	sonicSilver: '#757575',
 	ghostWhite: '#f6f8fa',
 	spanishGrey: '#93979b',
-	ryb: '#002afa',
+	ryb: '#0039CC',
 	darkLava: '#453e33',
 	spaceCadet: '#122156',
 	imperialBlue: '#021e97',
@@ -22,13 +22,59 @@ export const colors = {
 	lightSteelBlue: '#adbada',
 	crayola: '#1e5cf6',
 	violetBlue: '#7281cf',
-	red: '#FF0001',
+	red: '#D30000',
 	darkCandyAppleRed: '#a20000',
+
+	// Improved Minimalist Y2K colors
+	pastelBlue: '#83B2DD',
+	pastelPink: '#FF9999',
+	pastelPurple: '#BCA0D8',
+	navy: '#00264D',
+	silver: '#BBBBBB',
+	softBlack: '#222222',
+	paleBlue: '#99BBEE',
+	palePink: '#FFAABB',
+	gray: '#888888',
+	metallic: '#E8E8E8',
+
+	// Improved Cyberpunk colors with better contrast
+	neonPink: '#FF00DD',
+	neonBlue: '#00DDFF',
+	neonPurple: '#8800FF',
+	neonGreen: '#00DD00',
+	neonYellow: '#DDDD00',
+	cyberBlack: '#0A0A0A',
+	cyberDarkBlue: '#081020',
+	cyberNightPurple: '#1E0035',
+	electricBlue: '#0080C0',
+	matrixGreen: '#00CC40',
+
+	// Windows 98 colors with improved contrast
+	win98: {
+		desktop: '#1E2D3D',
+		windowBg: '#D4D0C8',
+		windowHeader: '#000080',
+		buttonFace: '#DDDDDD',
+		buttonShadow: '#808080',
+		buttonHighlight: '#FFFFFF',
+		buttonText: '#000000',
+		activeTitle: '#000080',
+		activeTitleText: '#FFFFFF',
+		menuBar: '#D4D0C8',
+		menuText: '#000000',
+		inactiveBorder: '#DDDDDD',
+		activeBorder: '#FFFFFF',
+		windowFrame: '#000000',
+		scrollbarFace: '#DDDDDD',
+		terminalText: '#FFFFFF',
+		terminalCommand: '#FFFF00',
+		terminalPrompt: '#00FF00',
+	},
 
 	palette02: {
 		dark: {
 			vampireBlack: '#050709',
-			ryb: '#002afa',
+			ryb: '#0039CC',
 			darkLava: '#453e33',
 			spaceCadet: '#122156',
 			imperialBlue: '#021e97',
@@ -38,12 +84,56 @@ export const colors = {
 		light: {
 			platinum: '#e3e6eb',
 			lavenderGray: '#bac4d6',
-			ryb: '#002bfe',
+			ryb: '#0039CC',
 			quickSilver: '#a6a6a7',
 			darkLiver: '#4e4f4f',
 			lightSteelBlue: '#adbada',
 			crayola: '#1e5cf6',
 			violetBlue: '#7281cf',
+		},
+	},
+
+	// Improved Minimalist Y2K Palette
+	y2k: {
+		dark: {
+			background: '#111111',
+			accent1: '#83B2DD',
+			accent2: '#BCA0D8',
+			accent3: '#FF9999',
+			text: '#FFFFFF',
+			textAlt: '#99BBEE',
+		},
+		light: {
+			background: '#FFFFFF',
+			accent1: '#00264D',
+			accent2: '#99BBEE',
+			accent3: '#FF9999',
+			text: '#111111',
+			textAlt: '#444444',
+		},
+	},
+
+	// Improved Cyberpunk Palette
+	cyberpunk: {
+		dark: {
+			background: '#0A0A0A',
+			accent1: '#FF00DD',
+			accent2: '#00DDFF',
+			accent3: '#8800FF',
+			accent4: '#00CC40',
+			text: '#FFFFFF',
+			textAlt: '#00DDFF',
+			glowText: '#FF00DD',
+		},
+		light: {
+			background: '#0A0A14',
+			accent1: '#00DDFF',
+			accent2: '#FF00DD',
+			accent3: '#DDDD00',
+			accent4: '#00DD00',
+			text: '#FFFFFF',
+			textAlt: '#00DDFF',
+			glowText: '#FF00DD',
 		},
 	},
 };

@@ -1,24 +1,25 @@
 import React from 'react';
 import { ThemeProvider as StyledComponentsProvider } from 'styled-components';
-import { dark } from './dark';
-import { light } from './light';
+import { retroComputer } from './retroComputer';
+import { ThemeType } from './models';
+import { ThemeFactory } from './themeFactory';
 
-type ThemeOption = typeof light;
-
-interface Context {
-	currentTheme: ThemeOption;
+interface ThemeContextType {
+	currentTheme: ThemeType;
 	toggleTheme: () => void;
 }
 
-export const ThemeContext = React.createContext({} as Context);
+export const ThemeContext = React.createContext({} as ThemeContextType);
 
-export const Theme: React.FC = ({ children }) => {
-	const INITIAL_THEME = dark;
+export const Theme: React.FC<{ children: React.ReactNode }> = ({
+	children,
+}) => {
+	const INITIAL_THEME = retroComputer;
 	const [currentTheme, setCurrentTheme] =
-		React.useState<ThemeOption>(INITIAL_THEME);
+		React.useState<ThemeType>(INITIAL_THEME);
 
 	const toggleTheme = React.useCallback(() => {
-		setCurrentTheme(state => (state?.title === 'dark' ? light : dark));
+		setCurrentTheme(currentTheme => ThemeFactory.getNextTheme(currentTheme));
 	}, []);
 
 	const value = React.useMemo(
@@ -27,13 +28,9 @@ export const Theme: React.FC = ({ children }) => {
 	);
 	return (
 		<ThemeContext.Provider value={value}>
-			<ThemeContext.Consumer>
-				{context => (
-					<StyledComponentsProvider theme={context.currentTheme}>
-						{children}
-					</StyledComponentsProvider>
-				)}
-			</ThemeContext.Consumer>
+			<StyledComponentsProvider theme={currentTheme}>
+				{children}
+			</StyledComponentsProvider>
 		</ThemeContext.Provider>
 	);
 };

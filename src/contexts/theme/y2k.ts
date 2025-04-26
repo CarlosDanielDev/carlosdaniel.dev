@@ -1,8 +1,8 @@
 import { palette } from './palette';
 
-export const dark = {
-	title: 'dark',
-	palette: palette.palette01.dark,
+export const y2k = {
+	title: 'y2k',
+	palette: palette.y2k.dark,
 	breakpoints: {
 		desktop: '(max-width: 576px)',
 		xs: '480px',
