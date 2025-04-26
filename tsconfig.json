@@ -1,10 +1,7 @@
 {
 	"compilerOptions": {
 		"target": "ESNext",
-		"lib": [
-			"DOM",
-			"ESNext"
-		],
+		"lib": ["DOM", "ESNext"],
 		"allowJs": true,
 		"skipLibCheck": true,
 		"strict": true,
@@ -18,17 +15,11 @@
 		"jsx": "react-jsx",
 		"baseUrl": ".",
 		"paths": {
-			"*": [
-				"*"
-			],
-			"components": [
-				"src/components"
-			]
+			"*": ["*"],
+			"components": ["src/components"]
 		}
 	},
-	"include": [
-		"src"
-	],
+	"include": ["src"],
 	"references": [
 		{
 			"path": "./tsconfig.node.json"
