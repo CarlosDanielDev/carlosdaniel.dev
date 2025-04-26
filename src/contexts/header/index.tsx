@@ -9,7 +9,10 @@ interface Context {
 
 const HeaderContext = createContext({} as Context);
 
-export const HeaderProvider: React.FC = ({ children }) => {
+interface HeaderProviderProps {
+	children?: React.ReactNode;
+}
+export const HeaderProvider: React.FC<HeaderProviderProps> = ({ children }) => {
 	const [enabled, setEnabled] = useState(true);
 	const [mobileVisible, setMobileVisible] = useState(true);
 
