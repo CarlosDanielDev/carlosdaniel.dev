@@ -1,116 +1,6 @@
 /* eslint-disable react/no-array-index-key */
 import React, { useEffect, useState, useRef } from 'react';
-import styled, { keyframes } from 'styled-components';
-
-const blinkCursor = keyframes`
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
-`;
-
-const scanlineAnimation = keyframes`
-  0% { transform: translateY(0); }
-  100% { transform: translateY(100%); }
-`;
-
-const TerminalWrapper = styled.div`
-	position: relative;
-	background-color: ${({ theme }) => theme.palette.terminal || '#0c0c0c'};
-	border-radius: 5px;
-	border: 1px solid ${({ theme }) => theme.palette.primary || '#4ecca3'};
-	padding: 20px;
-	font-family: 'Courier New', monospace;
-	color: ${({ theme }) => theme.palette.glowText || '#4ecca3'};
-	margin: 30px 0;
-	box-shadow: 0 0 10px rgba(78, 204, 163, 0.2);
-	overflow: hidden;
-	width: 100%;
-
-	&::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background: linear-gradient(transparent 50%, rgba(78, 204, 163, 0.03) 50%);
-		background-size: 100% 4px;
-		pointer-events: none;
-		z-index: 1;
-	}
-
-	&::after {
-		content: '';
-		position: absolute;
-		height: 5px;
-		width: 100%;
-		left: 0;
-		top: 0;
-		background: rgba(78, 204, 163, 0.1);
-		animation: ${scanlineAnimation} 5s linear infinite;
-		z-index: 2;
-	}
-`;
-
-const TerminalHeader = styled.div`
-	display: flex;
-	align-items: center;
-	margin-bottom: 15px;
-	padding-bottom: 10px;
-	border-bottom: 1px solid ${({ theme }) => theme.palette.primary || '#4ecca3'};
-`;
-
-const TerminalTitle = styled.div`
-	font-size: 1.4rem;
-	font-weight: bold;
-	color: ${({ theme }) => theme.palette.primary || '#4ecca3'};
-`;
-
-const TerminalContent = styled.div`
-	line-height: 1.5;
-`;
-
-const TerminalPrompt = styled.div`
-	display: flex;
-	margin-bottom: 8px;
-`;
-
-const PromptUser = styled.span`
-	color: ${({ theme }) => theme.palette.primary || '#4ecca3'};
-	margin-right: 8px;
-`;
-
-const PromptLocation = styled.span`
-	color: ${({ theme }) => theme.palette.secondary || '#a9b7c6'};
-	margin-right: 8px;
-`;
-
-const PromptChar = styled.span`
-	color: white;
-	margin-right: 8px;
-`;
-
-const TerminalLine = styled.div`
-	margin-bottom: 8px;
-	display: flex;
-	flex-wrap: wrap;
-`;
-
-const CommandOutput = styled.pre`
-	margin: 0;
-	white-space: pre-wrap;
-	word-break: break-word;
-	margin-bottom: 15px;
-	margin-left: 16px;
-`;
-
-const Cursor = styled.span`
-	display: inline-block;
-	width: 8px;
-	height: 15px;
-	background-color: ${({ theme }) => theme.palette.glowText || '#4ecca3'};
-	margin-left: 4px;
-	animation: ${blinkCursor} 1s infinite;
-`;
+import * as S from './styles';
 
 interface RetroTerminalProps {
 	className?: string;
@@ -217,36 +107,36 @@ export const RetroTerminal: React.FC<RetroTerminalProps> = ({ className }) => {
 	}, [currentLineIndex, currentCharIndex, commands, outputs]);
 
 	return (
-		<TerminalWrapper className={className}>
-			<TerminalHeader>
-				<TerminalTitle>terminal@carlosdaniel:~</TerminalTitle>
-			</TerminalHeader>
-			<TerminalContent>
+		<S.TerminalWrapper className={className}>
+			<S.TerminalHeader>
+				<S.TerminalTitle>terminal@carlosdaniel:~</S.TerminalTitle>
+			</S.TerminalHeader>
+			<S.TerminalContent>
 				{visibleLines.map((line, index) => {
 					// Even indexes are commands, odd indexes are outputs
 					if (index % 2 === 0) {
 						return (
-							<TerminalPrompt key={index}>
-								<PromptUser>carlosdaniel</PromptUser>
-								<PromptLocation>~</PromptLocation>
-								<PromptChar>$</PromptChar>
-								<TerminalLine>{line}</TerminalLine>
-								{index === currentLineIndex && showCursor && <Cursor />}
-							</TerminalPrompt>
+							<S.TerminalPrompt key={index}>
+								<S.PromptUser>carlosdaniel</S.PromptUser>
+								<S.PromptLocation>~</S.PromptLocation>
+								<S.PromptChar>$</S.PromptChar>
+								<S.TerminalLine>{line}</S.TerminalLine>
+								{index === currentLineIndex && showCursor && <S.Cursor />}
+							</S.TerminalPrompt>
 						);
 					}
 					// eslint-disable-next-line react/no-array-index-key
-					return <CommandOutput key={index}>{line}</CommandOutput>;
+					return <S.CommandOutput key={index}>{line}</S.CommandOutput>;
 				})}
 				{currentLineIndex >= commands.length * 2 && (
-					<TerminalPrompt>
-						<PromptUser>carlosdaniel</PromptUser>
-						<PromptLocation>~</PromptLocation>
-						<PromptChar>$</PromptChar>
-						{showCursor && <Cursor />}
-					</TerminalPrompt>
+					<S.TerminalPrompt>
+						<S.PromptUser>carlosdaniel</S.PromptUser>
+						<S.PromptLocation>~</S.PromptLocation>
+						<S.PromptChar>$</S.PromptChar>
+						{showCursor && <S.Cursor />}
+					</S.TerminalPrompt>
 				)}
-			</TerminalContent>
-		</TerminalWrapper>
+			</S.TerminalContent>
+		</S.TerminalWrapper>
 	);
 };
