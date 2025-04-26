@@ -18,6 +18,85 @@ export const en = {
 			thanksForVisiting: 'Thanks for visiting my site!',
 			contact: 'contact',
 			moreInfo: 'for more information.',
+			experiences: [
+				{
+					name: 'Niceplanet',
+					period: '2018 - 2020',
+					role: 'Junior Fullstack Developer (02/2018 - 08/2018) / Mid-level Fullstack Developer (08/2018 - 06/2020)',
+					projects: [
+						{
+							name: 'Niceplanet',
+							description:
+								'Smgeo - Property analysis and monitoring project using PHP and Slim Framework with Twig template',
+							status: 'In production',
+						},
+						{
+							name: 'Smgeo Consulta',
+							description:
+								'Consultation portal for monitoring already carried out for Smgeo clients using React.',
+							status: 'In production',
+						},
+					],
+				},
+				{
+					name: 'Primepass (now Primepass Connect)',
+					period: '2020 - 2020',
+					role: 'Mid-level Hybrid Mobile Developer (06/2020 - 10/2020) / Senior Hybrid Mobile Developer (10/2020 - 12/2020)',
+					projects: [
+						{
+							name: 'Primepass',
+							description:
+								'Ticket sales and subscription events app made with React Native.',
+							status: 'Discontinued',
+						},
+					],
+				},
+				{
+					name: 'Appertech (now Mathex) - {Smiles[GOL]}',
+					period: '2021 - 2021',
+					role: 'Senior Frontend Developer (01/2021 - 03/2021)',
+					projects: [
+						{
+							name: 'Smiles',
+							description:
+								'GOL loyalty program, development of the car rental feature by Localiza within the Smiles website.',
+							status: 'In production',
+						},
+					],
+				},
+				{
+					name: 'Appertech (now Mathex) - {Stix}',
+					period: '2021 - 2021',
+					role: 'Senior Hybrid Mobile Developer (03/2021 - 12/2021)',
+					projects: [
+						{
+							name: 'Stix',
+							description:
+								'Cashback app, development of new features and maintenance of the app using React Native.',
+							status: 'In production',
+						},
+					],
+				},
+				{
+					name: 'Puravida',
+					period: '2022 - Present',
+					role: 'Senior Frontend Developer (01/2022 - Present)',
+					projects: [
+						{
+							name: 'Puravida',
+							description:
+								'Natural products store, development of new features and website maintenance using React.',
+							status: 'In production',
+						},
+						{
+							name: 'Puravida PRIME',
+							description:
+								'Health and wellness content streaming platform, development of new features and website maintenance using React and mobile app using React Native.',
+							status: 'In production',
+						},
+					],
+				},
+			],
 		},
 		links: {
 			jobTitle: 'Software developer',
@@ -28,6 +107,7 @@ export const en = {
 		components: {
 			footer: {
 				infoFooter: 'made with ☕️ by @carlosdaniel.dev',
+				copyright: 'All rights reserved',
 			},
 			flagLabels: {
 				pt: 'Portuguese',
