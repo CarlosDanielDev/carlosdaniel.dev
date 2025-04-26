@@ -1,8 +1,10 @@
 import React from 'react';
-import { Home, Link as LinkIcon, Tool as ToolIcon } from 'react-feather';
 import { useTranslation } from 'react-i18next';
 import { Logo, ToggleTheme, FlagSelect, BottomMenu } from 'components';
 import { useHeader, useMobile } from 'src/contexts';
+import { FaLaptopCode } from 'react-icons/fa';
+import { BiCodeAlt } from 'react-icons/bi';
+import { MdOutlineEmojiObjects } from 'react-icons/md';
 import * as S from './styles';
 
 interface HeaderProps {}
@@ -23,13 +25,13 @@ export const Header: React.FC<HeaderProps> = () => {
 							<>
 								<S.Nav>
 									<S.LinkNav to="/" title={t('components.header.home')}>
-										<Home size={24} />
+										<FaLaptopCode size={24} />
 									</S.LinkNav>
 									<S.LinkNav to="/links" title={t('components.header.links')}>
-										<LinkIcon size={24} />
+										<BiCodeAlt size={26} />
 									</S.LinkNav>
 									<S.LinkNav to="/tools" title={t('components.header.tools')}>
-										<ToolIcon size={24} />
+										<MdOutlineEmojiObjects size={26} />
 									</S.LinkNav>
 								</S.Nav>
 								<ToggleTheme />
