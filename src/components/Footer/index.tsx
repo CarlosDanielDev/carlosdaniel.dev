@@ -6,9 +6,24 @@ interface FooterProps {}
 
 export const Footer: React.FC<FooterProps> = () => {
 	const { t } = useTranslation();
+
+	const currentYear = new Date().getFullYear();
+
 	return (
 		<S.Container>
-			<S.InfoFooter>{t('components.footer.infoFooter')}</S.InfoFooter>
+			<S.InfoFooter>
+				<S.FooterText>{t('components.footer.infoFooter')}</S.FooterText>
+				<S.FooterText>
+					© {currentYear} -{' '}
+					<S.FooterLink
+						href="https://github.com/CarlosDanielDev"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						Carlos Daniel
+					</S.FooterLink>
+				</S.FooterText>
+			</S.InfoFooter>
 		</S.Container>
 	);
 };
