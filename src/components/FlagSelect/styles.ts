@@ -1,129 +1,110 @@
-import { breakpointDesktop } from 'src/constants';
 import styled, { css } from 'styled-components';
 
-type Props = {
+interface ContainerProps {}
+
+interface ItemProps {
 	active: boolean;
 	enabled: boolean;
-};
+}
 
-export const Container = styled.ul`
-	min-width: 40px;
-	min-height: 40px;
-	border-radius: 20px;
-	width: auto;
-	position: fixed;
-	right: 8px;
-	top: 4px;
-
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background: ${({ theme }) => theme.palette.backgroundHover};
-	padding: 8px;
-	transition: 0.3s;
-	flex-direction: column;
-	box-shadow: ${({ theme }) => theme.palette.shadow};
-
-	@media (min-width: ${breakpointDesktop}px) {
-		top: 0px;
-		right: -50px;
-		position: absolute;
-	}
-`;
-
-export const Item = styled.li<Props>`
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 100%;
-	margin-bottom: 8px;
+export const Container = styled.div<ContainerProps>`
+	position: relative;
 	cursor: pointer;
-	${({ active }) =>
-		!active
-			? css`
-					&:hover {
-						span {
-							display: block;
-						}
-						.label-container {
-							display: flex;
-							justify-content: space-between;
-						}
-					}
-					.label-container {
-						display: none;
-					}
-			  `
-			: css`
-					.label-container {
-						justify-content: space-between;
-					}
-					justify-content: space-between;
-					span {
-						display: block;
-					}
-			  `}
-
-	&:last-child {
-		margin-bottom: 0;
-	}
-
-	${({ enabled }) =>
-		!enabled &&
-		css`
-			cursor: not-allowed;
-			filter: blur(1px);
-			opacity: 0.5;
-		`}
+	min-width: 90px;
+	z-index: 20;
 `;
 
 export const Flag = styled.img`
-	width: 100%;
-	transition: all 0.3s ease-in;
-	height: 100%;
+	width: 24px;
+	height: 24px;
 	border-radius: 50%;
 	object-fit: cover;
-	user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
+	transition: transform 0.2s ease;
 `;
 
 export const ImageContainer = styled.div`
-	width: 34px;
-	height: 34px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-`;
-
-export const Label = styled.span`
-	display: none;
-	user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	transition: 0.3s;
-
-	color: ${({ theme }) => theme.palette.title};
+	width: 30px;
+	height: 30px;
 `;
 
 export const LabelContainer = styled.div`
-	width: 140px;
 	display: flex;
 	align-items: center;
-	justify-content: flex-start;
-	margin-left: 16px;
+	justify-content: space-between;
+	margin-left: 8px;
+	gap: 8px;
 
-	color: ${({ theme }) => theme.palette.title};
 	svg {
-		width: 24px;
-		height: 24px;
-		margin-left: 8px;
+		transition: transform 0.2s ease;
 	}
 `;
 
-export const List = styled.ul`
-	list-style: none;
+export const Label = styled.span`
+	font-size: 1rem;
+	color: ${({ theme }) => theme.palette.title};
+	font-weight: 500;
+`;
+
+export const Item = styled.div<ItemProps>`
+	display: flex;
+	padding: 8px 12px;
+	align-items: center;
+	border-radius: 8px;
+	cursor: ${({ enabled }) => (enabled ? 'pointer' : 'not-allowed')};
+	opacity: ${({ enabled }) => (enabled ? 1 : 0.5)};
+	background: ${({ theme }) => theme.palette.backgroundHover};
+	transition: all 0.2s ease;
+
+	&:hover {
+		background: ${({ theme, active }) =>
+			active ? theme.palette.primary : theme.palette.backgroundHover};
+
+		${Flag} {
+			transform: scale(1.1);
+		}
+	}
+
+	${({ active, theme }) =>
+		active &&
+		css`
+			background: ${theme.palette.primary};
+
+			${Label} {
+				color: ${theme.palette.textColorPrimary};
+			}
+
+			svg {
+				color: ${theme.palette.textColorPrimary};
+				transform: rotate(180deg);
+			}
+		`}
+`;
+
+export const List = styled.div`
+	position: absolute;
+	top: calc(100% + 8px);
+	right: 0;
+	width: 160px;
 	display: flex;
 	flex-direction: column;
-	width: 100%;
+	gap: 8px;
+	background: ${({ theme }) => theme.palette.backgroundHover};
+	border-radius: 8px;
+	padding: 8px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	animation: fadeIn 0.2s ease;
+
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+			transform: translateY(-10px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
 `;
