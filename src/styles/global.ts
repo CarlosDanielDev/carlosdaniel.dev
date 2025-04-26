@@ -1,5 +1,5 @@
 import { createGlobalStyle, css } from 'styled-components';
-import { scanlines, enhancedNeonPulse, enhancedGlitch } from './animations';
+import { enhancedNeonPulse, enhancedGlitch } from './animations';
 
 export default createGlobalStyle`
 
