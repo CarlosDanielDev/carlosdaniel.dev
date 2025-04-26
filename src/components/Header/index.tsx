@@ -1,6 +1,7 @@
+/* eslint-disable import/no-cycle */
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Logo, ToggleTheme, FlagSelect, BottomMenu } from 'components';
+import { Logo, ToggleTheme, FlagSelect, BottomMenu } from 'src/components';
 import { useHeader, useMobile } from 'src/contexts';
 import { FaLaptopCode } from 'react-icons/fa';
 import { BiCodeAlt } from 'react-icons/bi';

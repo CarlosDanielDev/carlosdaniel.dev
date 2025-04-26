@@ -1,3 +1,4 @@
+/* eslint-disable import/no-cycle */
 import { RefObject, useEffect, useRef } from 'react';
 
 import { useIsomorphicLayoutEffect } from 'src/hooks';
