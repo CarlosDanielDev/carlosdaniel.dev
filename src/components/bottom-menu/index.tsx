@@ -1,9 +1,9 @@
+/* eslint-disable import/no-cycle */
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { ToggleTheme } from 'components';
+import { ToggleTheme } from 'src/components';
 import { FaLaptopCode } from 'react-icons/fa';
 import { BiCodeAlt } from 'react-icons/bi';
-import { MdOutlineEmojiObjects } from 'react-icons/md';
 import * as S from './styles';
 
 interface BottomMenuProps {}
