@@ -6,6 +6,7 @@ export const retroComputer = {
 		title: '#FFFFFF',
 		primary: '#88C0D0',
 		textColorPrimary: '#FFFFFF',
+		textPrimary: '#FFFFFF',
 		secondary: '#E8EEF9',
 		placeholder: '#B8C4D8',
 		shadow: '0 4px 6px rgba(0, 0, 0, 0.1)',

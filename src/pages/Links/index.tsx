@@ -7,7 +7,7 @@ import {
 	GitHub,
 } from 'react-feather';
 import { useTranslation } from 'react-i18next';
-import { useQuery } from 'react-query';
+import { useQuery } from '@tanstack/react-query';
 import { githubApi } from 'src/services';
 import * as S from './styles';
 
@@ -32,14 +32,14 @@ enum LinksMedia {
 
 export const Links: React.FC<LinksProps> = () => {
 	const { t } = useTranslation();
-	const { data: githubInfo } = useQuery<GitHubResponse>(
-		'@get-user-info',
-		async () => {
+	const { data: githubInfo } = useQuery<GitHubResponse>({
+		queryKey: ['@get-user-info'],
+		queryFn: async () => {
 			const response = await githubApi.get('/users/CarlosDanielDev');
 			console.log({ response });
 			return response.data;
 		},
-	);
+	});
 
 	return (
 		<S.Wrapper>

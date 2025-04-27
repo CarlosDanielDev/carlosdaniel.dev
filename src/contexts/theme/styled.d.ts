@@ -20,7 +20,7 @@ declare module 'styled-components' {
 				>
 			>;
 			scanline: string;
-			terminal: SimpleInterpolation;
+			terminal: Interpolation<any>;
 			background: string;
 			backgroundHover: string;
 			title: string;

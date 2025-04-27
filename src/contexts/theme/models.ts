@@ -1,4 +1,4 @@
-import { SimpleInterpolation } from 'styled-components';
+import { Interpolation } from 'styled-components';
 
 export interface ThemePalette {
 	background: string;
@@ -6,6 +6,7 @@ export interface ThemePalette {
 	title: string;
 	primary: string;
 	textColorPrimary: string;
+	textPrimary: string;
 	secondary: string;
 	placeholder: string;
 	shadow: string;
@@ -26,7 +27,7 @@ export interface ThemePalette {
 	accent4?: string;
 	glowText?: string;
 	textGlow?: string;
-	terminal: SimpleInterpolation;
+	terminal: Interpolation<any>;
 	scanline: string;
 }
 
