@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Header, CenteredContainer, Main, Footer } from 'components';
+import { Header, Main, Footer } from 'src/components';
+import { CenteredContainer } from 'src/components/container';
 import * as P from 'src/pages';
 import styled, { css } from 'styled-components';
 

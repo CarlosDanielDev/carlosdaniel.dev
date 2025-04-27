@@ -1,5 +1,5 @@
 import React from 'react';
-import { CenteredContainer } from 'src/components';
+import { CenteredContainer } from 'src/components/container';
 import { RetroTerminalView } from 'src/pages/terminal/RetroTerminalView';
 import * as S from 'src/pages/terminal/styles';
 
