@@ -10,3 +10,4 @@ export * from './timer';
 export * from './form';
 export * from './text-not-found';
 export * from './go-back-button';
+export * from './container';
