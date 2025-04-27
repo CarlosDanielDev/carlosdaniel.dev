@@ -5,14 +5,12 @@ import * as S from './styles';
 
 export const Terminal: React.FC = () => {
 	return (
-		<>
-			<C.CenteredContainer>
-				<RetroTerminalView />
-				<S.HelpText>
-					Type commands to interact with the terminal. Try &quot;help&quot; to
-					see available commands.
-				</S.HelpText>
-			</C.CenteredContainer>
-		</>
+		<C.CenteredContainer>
+			<RetroTerminalView />
+			<S.HelpText>
+				Type commands to interact with the terminal. Try &quot;help&quot; to see
+				available commands.
+			</S.HelpText>
+		</C.CenteredContainer>
 	);
 };
