@@ -3,12 +3,12 @@ import { HelpCommand } from 'src/domain/terminal/commands/HelpCommand';
 import { WhoAmICommand } from 'src/domain/terminal/commands/WhoAmICommand';
 import { SkillsCommand } from 'src/domain/terminal/commands/SkillsCommand';
 import { ClearCommand } from 'src/domain/terminal/commands/ClearCommand';
+import { ExperienceCommand } from 'src/domain/terminal/commands/ExperienceCommand';
+import { TFunction } from 'i18next';
 import { TerminalService } from './TerminalService';
 
 export class TerminalServiceFactory {
-	static create(
-		i18n: (key: string, defaultValue?: string) => string,
-	): TerminalService {
+	static create(i18n: TFunction): TerminalService {
 		const commandRepository = new InMemoryCommandRepository();
 		const terminalService = new TerminalService(commandRepository);
 
@@ -25,7 +25,7 @@ export class TerminalServiceFactory {
 		commandRepository.register('whoami', whoamiCommand);
 		helpCommand.registerDescription(
 			'whoami',
-			i18n('terminal.commands.whoami', 'Show who I am'),
+			i18n('terminal.commands.whoami', 'Who am I'),
 		);
 
 		const skillsCommand = new SkillsCommand([
@@ -36,7 +36,14 @@ export class TerminalServiceFactory {
 		commandRepository.register('skills', skillsCommand);
 		helpCommand.registerDescription(
 			'skills',
-			i18n('terminal.commands.skills', 'Show my skills'),
+			i18n('terminal.commands.skills', 'My skills'),
+		);
+
+		const experienceCommand = new ExperienceCommand(i18n);
+		commandRepository.register('experience', experienceCommand);
+		helpCommand.registerDescription(
+			'experience',
+			i18n('terminal.commands.experience', 'My professional experience'),
 		);
 
 		const clearCommand = new ClearCommand(terminalService);

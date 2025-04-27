@@ -36,14 +36,18 @@ export const Container = styled.button`
 
 export const Dropdown = styled.div`
 	position: absolute;
-	top: 100%;
 	right: 0;
+	bottom: 0%;
 	min-width: 160px;
 	background: ${({ theme }) => theme.palette.background};
 	border-radius: 8px;
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 	z-index: 10;
 	overflow: hidden;
+
+	@media (min-width: 769px) {
+		bottom: revert-layer;
+	}
 `;
 
 interface ThemeOptionProps {

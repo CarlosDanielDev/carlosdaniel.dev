@@ -95,8 +95,10 @@ export const PromptChar = styled.span`
 
 export const TerminalLine = styled.div`
 	margin-bottom: 8px;
-	display: flex;
-	flex-wrap: wrap;
+	display: inline-block;
+	flex: 1;
+	color: ${({ theme }) => theme.palette.terminalText || '#FFFFFF'};
+	position: relative;
 `;
 
 export const CommandOutput = styled.pre`
@@ -107,11 +109,17 @@ export const CommandOutput = styled.pre`
 	margin-left: 16px;
 `;
 
-export const Cursor = styled.span`
+export const Cursor = styled.span<{ position?: number }>`
 	display: inline-block;
+	position: ${props => (props.position !== undefined ? 'absolute' : 'static')};
 	width: 8px;
 	height: 15px;
 	background-color: ${({ theme }) => theme.palette.glowText || '#4ecca3'};
-	margin-left: 4px;
+	${props =>
+		props.position !== undefined
+			? `left: ${props.position}ch;`
+			: 'margin-left: 4px;'}
+	top: 0;
 	animation: ${blinkCursor} 1s infinite;
+	z-index: 2;
 `;

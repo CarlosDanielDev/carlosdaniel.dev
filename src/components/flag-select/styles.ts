@@ -10,7 +10,7 @@ interface ItemProps {
 export const Container = styled.div<ContainerProps>`
 	position: relative;
 	cursor: pointer;
-	min-width: 90px;
+	min-width: 75px;
 	z-index: 20;
 `;
 
@@ -46,6 +46,10 @@ export const Label = styled.span`
 	font-size: 1rem;
 	color: ${({ theme }) => theme.palette.title};
 	font-weight: 500;
+
+	@media (max-width: 768px) {
+		display: none;
+	}
 `;
 
 export const Item = styled.div<ItemProps>`
@@ -81,10 +85,26 @@ export const Item = styled.div<ItemProps>`
 				transform: rotate(180deg);
 			}
 		`}
+
+	@media (max-width: 768px) {
+		padding: 8px 6px;
+		background: transparent;
+
+		&:hover {
+			background: transparent;
+		}
+
+		${({ active }) =>
+			active &&
+			css`
+				background: transparent;
+			`}
+	}
 `;
 
 export const List = styled.div`
 	position: absolute;
+	top: auto;
 	top: calc(100% + 8px);
 	right: 0;
 	width: 160px;
@@ -100,11 +120,24 @@ export const List = styled.div`
 	@keyframes fadeIn {
 		from {
 			opacity: 0;
-			transform: translateY(-10px);
+			transform: translateY(10px);
 		}
 		to {
 			opacity: 1;
 			transform: translateY(0);
+		}
+	}
+
+	@media (min-width: 769px) {
+		@keyframes fadeIn {
+			from {
+				opacity: 0;
+				transform: translateY(-10px);
+			}
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
 		}
 	}
 `;

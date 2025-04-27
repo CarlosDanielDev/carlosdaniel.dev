@@ -9,7 +9,8 @@
 		"preview": "vite preview",
 		"lint:eslint:fix": "eslint --fix .",
 		"lint:prettier:check": "prettier --check .",
-		"lint:prettier:fix": "prettier --write ."
+		"lint:prettier:fix": "prettier --write .",
+		"i18n:sync": "node scripts/syncTerminalTranslations.js"
 	},
 	"dependencies": {
 		"@apollo/client": "^3.5.10",

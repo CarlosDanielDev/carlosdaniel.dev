@@ -74,6 +74,17 @@ export const Item = styled(NavLink as any)`
 	}
 `;
 
+export const IconContainer = styled.div`
+	padding: 0;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	transition: all 0.2s ease;
+	position: relative;
+`;
+
 export const Label = styled.span`
 	display: none;
 	font-size: 0.8rem;

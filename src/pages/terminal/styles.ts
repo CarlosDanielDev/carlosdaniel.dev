@@ -140,6 +140,8 @@ export const CommandInput = styled.input`
 	flex: 1;
 	outline: none;
 	width: 100%;
+	opacity: 1;
+	visibility: visible;
 `;
 
 export const Cursor = styled.span<{ position: number }>`

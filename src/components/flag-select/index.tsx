@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ChevronDown } from 'react-feather';
+import { useMobile } from 'src/contexts';
 import * as S from './styles';
 
 interface FlagSelectProps {}
@@ -14,6 +15,7 @@ type FlagItem = {
 
 export const FlagSelect: React.FC<FlagSelectProps> = () => {
 	const { t, i18n } = useTranslation();
+	const { isMobile } = useMobile();
 
 	const [isListVisible, setIsListVisible] = useState(false);
 	const flagData = useMemo(
@@ -76,6 +78,24 @@ export const FlagSelect: React.FC<FlagSelectProps> = () => {
 		setIsListVisible(state => !state);
 	};
 
+	// Fechar ao clicar fora do componente
+	useEffect(() => {
+		const handleClickOutside = (event: MouseEvent) => {
+			const container = document.querySelector('.flag-select-container');
+			if (container && !container.contains(event.target as Node)) {
+				setIsListVisible(false);
+			}
+		};
+
+		if (isListVisible) {
+			document.addEventListener('mousedown', handleClickOutside);
+		}
+
+		return () => {
+			document.removeEventListener('mousedown', handleClickOutside);
+		};
+	}, [isListVisible]);
+
 	useEffect(() => {
 		const current = flagData.find(item => item.code === i18n.language);
 		if (current) {
@@ -84,7 +104,7 @@ export const FlagSelect: React.FC<FlagSelectProps> = () => {
 	}, [flagData, i18n.language]);
 
 	return (
-		<S.Container>
+		<S.Container className="flag-select-container">
 			<S.Item
 				enabled
 				active={isListVisible}
@@ -94,10 +114,12 @@ export const FlagSelect: React.FC<FlagSelectProps> = () => {
 				<S.ImageContainer>
 					<S.Flag alt="current flag" src={active.image} />
 				</S.ImageContainer>
-				<S.LabelContainer className="label-container">
-					<S.Label>{active.label}</S.Label>
-					<ChevronDown size={16} />
-				</S.LabelContainer>
+				{!isMobile && (
+					<S.LabelContainer className="label-container">
+						<S.Label>{active.label}</S.Label>
+						<ChevronDown size={16} />
+					</S.LabelContainer>
+				)}
 			</S.Item>
 			{isListVisible && (
 				<S.List>

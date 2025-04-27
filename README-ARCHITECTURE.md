@@ -7,7 +7,7 @@ Esta refatoração aplica os princípios de **Clean Architecture**, **Domain-Dri
 ```
 src/
 ├── domain/             # Camada de domínio (regras de negócio)
-│   └── terminal/       
+│   └── terminal/
 │       ├── Command.ts            # Objeto de valor para comandos
 │       ├── TerminalLine.ts       # Entidade para linhas do terminal
 │       ├── CommandRepository.ts  # Interface do repositório e handler
@@ -22,7 +22,7 @@ src/
 │       ├── TerminalService.ts        # Serviço para executar comandos
 │       └── TerminalServiceFactory.ts # Factory para criar e configurar o serviço
 │
-├── infrastructure/     # Camada de infraestrutura 
+├── infrastructure/     # Camada de infraestrutura
 │   └── repositories/
 │       └── InMemoryCommandRepository.ts  # Implementação do repositório
 │
@@ -64,4 +64,4 @@ src/
 2. **Manutenibilidade**: O código é mais fácil de entender e modificar
 3. **Flexibilidade**: Podemos trocar implementações sem afetar o domínio
 4. **Escalabilidade**: A arquitetura suporta crescimento sem se tornar complexa
-5. **Independência de Framework**: O domínio não depende do React 
+5. **Independência de Framework**: O domínio não depende do React

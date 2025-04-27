@@ -1,6 +1,6 @@
 import React from 'react';
 import { ThemeProvider as StyledComponentsProvider } from 'styled-components';
-import { retroComputer } from './retroComputer';
+import { cyberpunk } from './cyberpunk';
 import { ThemeType } from './models';
 import { ThemeFactory } from './themeFactory';
 
@@ -14,7 +14,7 @@ export const ThemeContext = React.createContext({} as ThemeContextType);
 export const Theme: React.FC<{ children: React.ReactNode }> = ({
 	children,
 }) => {
-	const INITIAL_THEME = retroComputer;
+	const INITIAL_THEME = cyberpunk;
 	const [currentTheme, setCurrentTheme] =
 		React.useState<ThemeType>(INITIAL_THEME);
 

@@ -33,8 +33,11 @@ export const RetroTerminalView: React.FC<RetroTerminalViewProps> = ({
 	}, [history, focused]);
 
 	const executeCommand = () => {
-		setCommandInput('');
-		setHistory(terminalService.getHistory());
+		if (commandInput.trim()) {
+			terminalService.executeCommand(commandInput);
+			setCommandInput('');
+			setHistory(terminalService.getHistory());
+		}
 	};
 
 	const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {

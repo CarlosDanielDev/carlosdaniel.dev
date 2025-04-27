@@ -107,10 +107,22 @@ export const pt = {
 			title: 'Ferramentas',
 		},
 		terminal: {
-			help: 'Comandos disponíveis:\n- whoami: Quem sou eu\n- skills: Minhas habilidades\n- projects: Projetos em que trabalhei\n- experience: Minha experiência profissional\n- contact: Informações de contato\n- ls: Listar comandos disponíveis\n- clear: Limpar terminal\n- home: Voltar para a página inicial\n- about: Ver página detalhada sobre mim',
+			headerTitle: 'terminal@carlosdaniel:~',
+			promptUser: 'carlosdaniel',
+			promptLocation: '~',
+			clickToFocus: 'Clique para focar',
+			welcome:
+				"Bem-vindo ao terminal interativo! Digite 'help' para ver os comandos disponíveis.",
+			typeHelp: "Digite 'help' para ver os comandos disponíveis.",
+			commandNotFound:
+				"comando não encontrado. Digite 'help' para ver os comandos disponíveis.",
+			availableCommands: 'Comandos disponíveis',
 			whoami: 'Carlos Daniel - Desenvolvedor Frontend',
-			skills:
-				'Frontend: React, TypeScript, Next.js\nBackend: Node.js, Express\nOutros: Git, Docker, AWS',
+			skills: {
+				frontend: 'Frontend: React, TypeScript, Next.js',
+				backend: 'Backend: Node.js, Express',
+				other: 'Outros: Git, Docker, AWS',
+			},
 			projects:
 				'1. Site Pessoal - Este site\n2. Plataforma E-commerce - React + Node.js\n3. App de Gerenciamento de Tarefas - React Native\n4. Dashboard de Visualização de Dados - D3.js + React',
 			experience:
@@ -132,6 +144,7 @@ export const pt = {
 				clear: 'Limpar terminal',
 				home: 'Voltar para a página inicial',
 				about: 'Ver página detalhada sobre mim',
+				help: 'Exibir comandos disponíveis',
 			},
 		},
 		components: {
@@ -158,6 +171,32 @@ export const pt = {
 			timer: {
 				message: 'Em breve...',
 			},
+		},
+		retroTerminal: {
+			title: 'terminal@carlosdaniel:~',
+			promptUser: 'carlosdaniel',
+			promptLocation: '~',
+			whoami: 'Carlos Daniel',
+			pwd: '/home/user/projetos/portfolio',
+			skills: {
+				frontend: 'Frontend: React, TypeScript, styled-components',
+				backend: 'Backend: Node.js, Express, MongoDB',
+				devops: 'DevOps: Docker, AWS',
+				others: 'Outros: Git, GraphQL, Testes',
+			},
+			projects: {
+				total: 'total 4',
+				dir1: 'drwxr-xr-x  2 carlosdaniel usuários 4096 Jun 10 09:45 .',
+				dir2: 'drwxr-xr-x 19 carlosdaniel usuários 4096 Jun 10 09:45 ..',
+				file1:
+					'-rw-r--r--  1 carlosdaniel usuários  507 Jun 10 09:45 projeto1.md',
+				file2:
+					'-rw-r--r--  1 carlosdaniel usuários  721 Jun 10 09:45 projeto2.md',
+				file3:
+					'-rw-r--r--  1 carlosdaniel usuários  612 Jun 10 09:45 projeto3.md',
+			},
+			contactInfo:
+				'Email: hello@carlosdaniel.dev | GitHub: github.com/devcarlosdaniel',
 		},
 	},
 };

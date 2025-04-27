@@ -23,7 +23,9 @@ export const BottomMenu: React.FC<BottomMenuProps> = () => {
 				<S.Item to="/links" title={t('components.header.links')}>
 					<BiCodeAlt size={24} />
 				</S.Item>
-				<ToggleTheme />
+				<S.IconContainer>
+					<ToggleTheme />
+				</S.IconContainer>
 			</S.List>
 		</S.Container>
 	);

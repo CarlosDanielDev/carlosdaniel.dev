@@ -107,10 +107,21 @@ export const en = {
 			title: 'Tools',
 		},
 		terminal: {
-			help: "Available commands:\n- whoami: Who am I\n- skills: My skills\n- projects: Projects I've worked on\n- experience: My professional experience\n- contact: Contact information\n- ls: List available commands\n- clear: Clear terminal\n- home: Go back to homepage\n- about: View detailed page about me",
+			headerTitle: 'terminal@carlosdaniel:~',
+			promptUser: 'carlosdaniel',
+			promptLocation: '~',
+			clickToFocus: 'Click to focus',
+			welcome:
+				"Welcome to the interactive terminal! Type 'help' to see available commands.",
+			typeHelp: "Type 'help' to see available commands.",
+			commandNotFound: "command not found. Type 'help' for available commands.",
+			availableCommands: 'Available commands',
 			whoami: 'Carlos Daniel - Frontend Developer',
-			skills:
-				'Frontend: React, TypeScript, Next.js\nBackend: Node.js, Express\nOther: Git, Docker, AWS',
+			skills: {
+				frontend: 'Frontend: React, TypeScript, Next.js',
+				backend: 'Backend: Node.js, Express',
+				other: 'Other: Git, Docker, AWS',
+			},
 			projects:
 				'1. Personal Website - This website\n2. E-commerce Platform - React + Node.js\n3. Task Management App - React Native\n4. Data Visualization Dashboard - D3.js + React',
 			experience:
@@ -118,7 +129,7 @@ export const en = {
 			contact:
 				'Email: hello@carlosdaniel.dev\nGitHub: github.com/devcarlosdaniel',
 			home: 'Redirecting to standard view...',
-			about: 'Redirecting to details page...',
+			about: 'Redirecting to about page...',
 			ls: 'whoami\nskills\nprojects\nexperience\ncontact\nhelp\nhome\nabout\nclear',
 			instructions:
 				'Type commands to interact with the terminal. Try "help" to see available commands.',
@@ -132,6 +143,7 @@ export const en = {
 				clear: 'Clear terminal',
 				home: 'Go back to homepage',
 				about: 'View detailed page about me',
+				help: 'Show available commands',
 			},
 		},
 		components: {
@@ -158,6 +170,29 @@ export const en = {
 			timer: {
 				message: 'coming soon...',
 			},
+		},
+		retroTerminal: {
+			title: 'terminal@carlosdaniel:~',
+			promptUser: 'carlosdaniel',
+			promptLocation: '~',
+			whoami: 'Carlos Daniel',
+			pwd: '/home/user/projects/portfolio',
+			skills: {
+				frontend: 'Frontend: React, TypeScript, styled-components',
+				backend: 'Backend: Node.js, Express, MongoDB',
+				devops: 'DevOps: Docker, AWS',
+				others: 'Others: Git, GraphQL, Testing',
+			},
+			projects: {
+				total: 'total 4',
+				dir1: 'drwxr-xr-x  2 carlosdaniel users 4096 Jun 10 09:45 .',
+				dir2: 'drwxr-xr-x 19 carlosdaniel users 4096 Jun 10 09:45 ..',
+				file1: '-rw-r--r--  1 carlosdaniel users  507 Jun 10 09:45 project1.md',
+				file2: '-rw-r--r--  1 carlosdaniel users  721 Jun 10 09:45 project2.md',
+				file3: '-rw-r--r--  1 carlosdaniel users  612 Jun 10 09:45 project3.md',
+			},
+			contactInfo:
+				'Email: hello@carlosdaniel.dev | GitHub: github.com/devcarlosdaniel',
 		},
 	},
 };
