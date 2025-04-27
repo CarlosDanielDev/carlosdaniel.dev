@@ -9,7 +9,7 @@ import {
 import { useTranslation } from 'react-i18next';
 import { useQuery } from '@tanstack/react-query';
 import { githubApi } from 'src/services';
-import * as S from './links/styles';
+import * as S from 'src/pages/links/styles';
 
 interface LinksProps {}
 
@@ -81,4 +81,4 @@ export const Links: React.FC<LinksProps> = () => {
 			</S.ListLinks>
 		</S.Wrapper>
 	);
-}; 
+};
