@@ -8,15 +8,15 @@ export const pt = {
 			title: 'Carlos Daniel - Desenvolvedor',
 			whoIs: 'Quem é Carlos Daniel?',
 			description:
-				'Carlos Daniel é um desenvolvedor frontend apaixonado por música, filosofia, Kung Fu e um estilo de vida de equilibrado.',
+				'Carlos Daniel é um desenvolvedor frontend apaixonado por música, filosofia, Kung Fu e um estilo de vida equilibrado.',
 			experience: 'Experiência Profissional',
-			experience1: `Mais de ${years} anos de experiência com desenvolvimento de apps web e híbrido.`,
+			experience1: `Mais de ${years} anos de experiência com desenvolvimento de apps web e híbridos.`,
 			experience2: 'Conhecimento no ecossistema Azure.',
 			experience3:
 				'Especialista em frontend, trabalhando com React e React Native.',
 			experience4: 'Usa TypeScript no dia a dia.',
 			thanksForVisiting: 'Obrigado por visitar o meu site!',
-			contact: 'contato',
+			contact: 'Contato',
 			moreInfo: 'para mais informações.',
 			tryTerminal: 'Experimente a interface do terminal interativo',
 			viewDetails: 'Ver detalhes',
@@ -24,7 +24,7 @@ export const pt = {
 				{
 					name: 'Niceplanet',
 					period: '2018 - 2020',
-					role: 'Desenvolvedor Fullstack Júnior(02/2018 - 08/2018) / Desenvolvedor Fullstack Pleno(08/2018 - 06/2020)',
+					role: 'Desenvolvedor Fullstack Júnior (02/2018 - 08/2018) / Desenvolvedor Fullstack Pleno (08/2018 - 06/2020)',
 					projects: [
 						{
 							name: 'Niceplanet',
@@ -35,15 +35,15 @@ export const pt = {
 						{
 							name: 'Smgeo Consulta',
 							description:
-								'Portal de consulta no monitoramento já realizados para clientes do Smgeo utilizando React.',
+								'Portal de consulta no monitoramento já realizado para clientes do Smgeo utilizando React.',
 							status: 'Em produção',
 						},
 					],
 				},
 				{
-					name: 'Primepass(atual Primepass Connect)',
+					name: 'Primepass (atual Primepass Connect)',
 					period: '2020 - 2020',
-					role: 'Desenvolvedor Mobile híbrido Pleno(06/2020 - 10/2020) / Desenvolvedor Mobile híbrido Sênior(10/2020 - 12/2020)',
+					role: 'Desenvolvedor Mobile Híbrido Pleno (06/2020 - 10/2020) / Desenvolvedor Mobile Híbrido Sênior (10/2020 - 12/2020)',
 					projects: [
 						{
 							name: 'Primepass',
@@ -54,7 +54,7 @@ export const pt = {
 					],
 				},
 				{
-					name: 'Appertech(atual Mathex) - {Smiles[GOL]}',
+					name: 'Appertech (atual Mathex) - {Smiles[GOL]}',
 					period: '2021 - 2021',
 					role: 'Desenvolvedor Frontend Sênior (01/2021 - 03/2021)',
 					projects: [
@@ -67,9 +67,9 @@ export const pt = {
 					],
 				},
 				{
-					name: 'Appertech(atual Mathex) - {Stix}',
+					name: 'Appertech (atual Mathex) - {Stix}',
 					period: '2021 - 2021',
-					role: 'Desenvolvedor Mobile híbrido Sênior (03/2021 - 12/2021)',
+					role: 'Desenvolvedor Mobile Híbrido Sênior (03/2021 - 12/2021)',
 					projects: [
 						{
 							name: 'Stix',
@@ -104,7 +104,7 @@ export const pt = {
 			jobTitle: 'Desenvolvedor de software',
 		},
 		tools: {
-			title: '',
+			title: 'Ferramentas',
 		},
 		terminal: {
 			help: 'Comandos disponíveis:\n- whoami: Quem sou eu\n- skills: Minhas habilidades\n- projects: Projetos em que trabalhei\n- experience: Minha experiência profissional\n- contact: Informações de contato\n- ls: Listar comandos disponíveis\n- clear: Limpar terminal\n- home: Voltar para a página inicial\n- about: Ver página detalhada sobre mim',
@@ -136,7 +136,7 @@ export const pt = {
 		},
 		components: {
 			footer: {
-				infoFooter: 'feito com ☕️ por @carlosdaniel.dev',
+				infoFooter: 'Feito com ☕️ por @carlosdaniel.dev',
 				copyright: 'Todos os direitos reservados',
 			},
 			flagLabels: {
@@ -151,12 +151,12 @@ export const pt = {
 			},
 			header: {
 				home: 'Página inicial',
-				links: 'Página de links',
+				links: 'Links',
 				tools: 'Ferramentas',
 				about: 'Sobre mim',
 			},
 			timer: {
-				message: 'em breve...',
+				message: 'Em breve...',
 			},
 		},
 	},

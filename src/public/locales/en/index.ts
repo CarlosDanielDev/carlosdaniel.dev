@@ -16,8 +16,10 @@ export const en = {
 				'Expert in frontend development, working with React and React Native.',
 			experience4: 'Uses TypeScript on a daily basis.',
 			thanksForVisiting: 'Thanks for visiting my site!',
-			contact: 'contact',
+			contact: 'Contact',
 			moreInfo: 'for more information.',
+			tryTerminal: 'Try the interactive terminal interface',
+			viewDetails: 'View details',
 			experiences: [
 				{
 					name: 'Niceplanet',
@@ -102,7 +104,35 @@ export const en = {
 			jobTitle: 'Software developer',
 		},
 		tools: {
-			title: '',
+			title: 'Tools',
+		},
+		terminal: {
+			help: "Available commands:\n- whoami: Who am I\n- skills: My skills\n- projects: Projects I've worked on\n- experience: My professional experience\n- contact: Contact information\n- ls: List available commands\n- clear: Clear terminal\n- home: Go back to homepage\n- about: View detailed page about me",
+			whoami: 'Carlos Daniel - Frontend Developer',
+			skills:
+				'Frontend: React, TypeScript, Next.js\nBackend: Node.js, Express\nOther: Git, Docker, AWS',
+			projects:
+				'1. Personal Website - This website\n2. E-commerce Platform - React + Node.js\n3. Task Management App - React Native\n4. Data Visualization Dashboard - D3.js + React',
+			experience:
+				'Senior Frontend Developer @ NiceCompany (2020-Present)\nFrontend Developer @ OtherCompany (2018-2020)\nJunior Developer @ StartupName (2017-2018)',
+			contact:
+				'Email: hello@carlosdaniel.dev\nGitHub: github.com/devcarlosdaniel',
+			home: 'Redirecting to standard view...',
+			about: 'Redirecting to details page...',
+			ls: 'whoami\nskills\nprojects\nexperience\ncontact\nhelp\nhome\nabout\nclear',
+			instructions:
+				'Type commands to interact with the terminal. Try "help" to see available commands.',
+			commands: {
+				whoami: 'Who am I',
+				skills: 'My skills',
+				projects: "Projects I've worked on",
+				experience: 'My professional experience',
+				contact: 'Contact information',
+				ls: 'List available commands',
+				clear: 'Clear terminal',
+				home: 'Go back to homepage',
+				about: 'View detailed page about me',
+			},
 		},
 		components: {
 			footer: {
@@ -121,8 +151,9 @@ export const en = {
 			},
 			header: {
 				home: 'Homepage',
-				links: 'Links page',
+				links: 'Links',
 				tools: 'Tools',
+				about: 'About me',
 			},
 			timer: {
 				message: 'coming soon...',

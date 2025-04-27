@@ -1,5 +1,6 @@
 /* eslint-disable react/no-array-index-key */
 import React, { useEffect, useState, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import * as S from './styles';
 
 interface RetroTerminalProps {
@@ -7,6 +8,7 @@ interface RetroTerminalProps {
 }
 
 export const RetroTerminal: React.FC<RetroTerminalProps> = ({ className }) => {
+	const { t } = useTranslation();
 	const [visibleLines, setVisibleLines] = useState<string[]>([]);
 	const [currentLineIndex, setCurrentLineIndex] = useState(0);
 	const [currentCharIndex, setCurrentCharIndex] = useState(0);
@@ -16,36 +18,56 @@ export const RetroTerminal: React.FC<RetroTerminalProps> = ({ className }) => {
 	const terminalLines = [
 		{
 			command: 'whoami',
-			output: 'Carlos Daniel',
+			output: t('retroTerminal.whoami', 'Carlos Daniel'),
 		},
 		{
 			command: 'pwd',
-			output: '/home/user/projects/portfolio',
+			output: t('retroTerminal.pwd', '/home/user/projects/portfolio'),
 		},
 		{
 			command: 'cat skills.txt',
 			output: [
-				'Frontend: React, TypeScript, styled-components',
-				'Backend: Node.js, Express, MongoDB',
-				'DevOps: Docker, AWS',
-				'Other: Git, GraphQL, Testing',
+				t(
+					'retroTerminal.skills.frontend',
+					'Frontend: React, TypeScript, styled-components',
+				),
+				t('retroTerminal.skills.backend', 'Backend: Node.js, Express, MongoDB'),
+				t('retroTerminal.skills.devops', 'DevOps: Docker, AWS'),
+				t('retroTerminal.skills.others', 'Outros: Git, GraphQL, Testes'),
 			].join('\n'),
 		},
 		{
 			command: 'ls -la projects/',
 			output: [
-				'total 4',
-				'drwxr-xr-x  2 carlosdaniel users 4096 Jun 10 09:45 .',
-				'drwxr-xr-x 19 carlosdaniel users 4096 Jun 10 09:45 ..',
-				'-rw-r--r--  1 carlosdaniel users  507 Jun 10 09:45 project1.md',
-				'-rw-r--r--  1 carlosdaniel users  721 Jun 10 09:45 project2.md',
-				'-rw-r--r--  1 carlosdaniel users  612 Jun 10 09:45 project3.md',
+				t('retroTerminal.projects.total', 'total 4'),
+				t(
+					'retroTerminal.projects.dir1',
+					'drwxr-xr-x  2 carlosdaniel users 4096 Jun 10 09:45 .',
+				),
+				t(
+					'retroTerminal.projects.dir2',
+					'drwxr-xr-x 19 carlosdaniel users 4096 Jun 10 09:45 ..',
+				),
+				t(
+					'retroTerminal.projects.file1',
+					'-rw-r--r--  1 carlosdaniel users  507 Jun 10 09:45 project1.md',
+				),
+				t(
+					'retroTerminal.projects.file2',
+					'-rw-r--r--  1 carlosdaniel users  721 Jun 10 09:45 project2.md',
+				),
+				t(
+					'retroTerminal.projects.file3',
+					'-rw-r--r--  1 carlosdaniel users  612 Jun 10 09:45 project3.md',
+				),
 			].join('\n'),
 		},
 		{
 			command: 'echo $CONTACT_INFO',
-			output:
+			output: t(
+				'retroTerminal.contactInfo',
 				'Email: hello@carlosdaniel.dev | GitHub: github.com/devcarlosdaniel',
+			),
 		},
 	];
 
@@ -109,7 +131,9 @@ export const RetroTerminal: React.FC<RetroTerminalProps> = ({ className }) => {
 	return (
 		<S.TerminalWrapper className={className}>
 			<S.TerminalHeader>
-				<S.TerminalTitle>terminal@carlosdaniel:~</S.TerminalTitle>
+				<S.TerminalTitle>
+					{t('retroTerminal.title', 'terminal@carlosdaniel:~')}
+				</S.TerminalTitle>
 			</S.TerminalHeader>
 			<S.TerminalContent>
 				{visibleLines.map((line, index) => {
@@ -117,8 +141,12 @@ export const RetroTerminal: React.FC<RetroTerminalProps> = ({ className }) => {
 					if (index % 2 === 0) {
 						return (
 							<S.TerminalPrompt key={index}>
-								<S.PromptUser>carlosdaniel</S.PromptUser>
-								<S.PromptLocation>~</S.PromptLocation>
+								<S.PromptUser>
+									{t('retroTerminal.promptUser', 'carlosdaniel')}
+								</S.PromptUser>
+								<S.PromptLocation>
+									{t('retroTerminal.promptLocation', '~')}
+								</S.PromptLocation>
 								<S.PromptChar>$</S.PromptChar>
 								<S.TerminalLine>{line}</S.TerminalLine>
 								{index === currentLineIndex && showCursor && <S.Cursor />}
@@ -130,8 +158,12 @@ export const RetroTerminal: React.FC<RetroTerminalProps> = ({ className }) => {
 				})}
 				{currentLineIndex >= commands.length * 2 && (
 					<S.TerminalPrompt>
-						<S.PromptUser>carlosdaniel</S.PromptUser>
-						<S.PromptLocation>~</S.PromptLocation>
+						<S.PromptUser>
+							{t('retroTerminal.promptUser', 'carlosdaniel')}
+						</S.PromptUser>
+						<S.PromptLocation>
+							{t('retroTerminal.promptLocation', '~')}
+						</S.PromptLocation>
 						<S.PromptChar>$</S.PromptChar>
 						{showCursor && <S.Cursor />}
 					</S.TerminalPrompt>

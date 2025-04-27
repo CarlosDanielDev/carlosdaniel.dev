@@ -17,7 +17,7 @@ export const Container = styled.footer`
 	min-height: 40px;
 	position: relative;
 	z-index: 10;
-	margin-top: auto;
+	margin-top: 48px;
 
 	${({ theme }) =>
 		theme?.title === 'cyberpunk' &&
