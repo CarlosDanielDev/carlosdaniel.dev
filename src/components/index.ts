@@ -1,5 +1,5 @@
 /* eslint-disable import/no-cycle */
-export * from './header';
+export * from './Header';
 export * from './logo';
 export * from './toggle-theme';
 export * from './bottom-menu';
