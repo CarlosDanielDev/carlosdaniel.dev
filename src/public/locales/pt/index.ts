@@ -18,6 +18,8 @@ export const pt = {
 			thanksForVisiting: 'Obrigado por visitar o meu site!',
 			contact: 'contato',
 			moreInfo: 'para mais informações.',
+			tryTerminal: 'Experimente a interface do terminal interativo',
+			viewDetails: 'Ver detalhes',
 			experiences: [
 				{
 					name: 'Niceplanet',
@@ -104,6 +106,34 @@ export const pt = {
 		tools: {
 			title: '',
 		},
+		terminal: {
+			help: 'Comandos disponíveis:\n- whoami: Quem sou eu\n- skills: Minhas habilidades\n- projects: Projetos em que trabalhei\n- experience: Minha experiência profissional\n- contact: Informações de contato\n- ls: Listar comandos disponíveis\n- clear: Limpar terminal\n- home: Voltar para a página inicial\n- about: Ver página detalhada sobre mim',
+			whoami: 'Carlos Daniel - Desenvolvedor Frontend',
+			skills:
+				'Frontend: React, TypeScript, Next.js\nBackend: Node.js, Express\nOutros: Git, Docker, AWS',
+			projects:
+				'1. Site Pessoal - Este site\n2. Plataforma E-commerce - React + Node.js\n3. App de Gerenciamento de Tarefas - React Native\n4. Dashboard de Visualização de Dados - D3.js + React',
+			experience:
+				'Desenvolvedor Frontend Sênior @ NiceCompany (2020-Presente)\nDesenvolvedor Frontend @ OtherCompany (2018-2020)\nDesenvolvedor Júnior @ StartupName (2017-2018)',
+			contact:
+				'Email: hello@carlosdaniel.dev\nGitHub: github.com/devcarlosdaniel',
+			home: 'Redirecionando para a visualização padrão...',
+			about: 'Redirecionando para a página de detalhes...',
+			ls: 'whoami\nskills\nprojects\nexperience\ncontact\nhelp\nhome\nabout\nclear',
+			instructions:
+				'Digite comandos para interagir com o terminal. Experimente "help" para ver os comandos disponíveis.',
+			commands: {
+				whoami: 'Quem sou eu',
+				skills: 'Minhas habilidades',
+				projects: 'Projetos em que trabalhei',
+				experience: 'Minha experiência profissional',
+				contact: 'Informações de contato',
+				ls: 'Listar comandos disponíveis',
+				clear: 'Limpar terminal',
+				home: 'Voltar para a página inicial',
+				about: 'Ver página detalhada sobre mim',
+			},
+		},
 		components: {
 			footer: {
 				infoFooter: 'feito com ☕️ por @carlosdaniel.dev',
@@ -123,6 +153,7 @@ export const pt = {
 				home: 'Página inicial',
 				links: 'Página de links',
 				tools: 'Ferramentas',
+				about: 'Sobre mim',
 			},
 			timer: {
 				message: 'em breve...',

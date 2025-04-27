@@ -28,11 +28,14 @@ export const Header: React.FC<HeaderProps> = () => {
 									<S.LinkNav to="/" title={t('components.header.home')}>
 										<FaLaptopCode size={24} />
 									</S.LinkNav>
+									<S.LinkNav
+										to="/about"
+										title={t('components.header.about', 'About')}
+									>
+										<MdOutlineEmojiObjects size={26} />
+									</S.LinkNav>
 									<S.LinkNav to="/links" title={t('components.header.links')}>
 										<BiCodeAlt size={26} />
-									</S.LinkNav>
-									<S.LinkNav to="/tools" title={t('components.header.tools')}>
-										<MdOutlineEmojiObjects size={26} />
 									</S.LinkNav>
 								</S.Nav>
 								<ToggleTheme />

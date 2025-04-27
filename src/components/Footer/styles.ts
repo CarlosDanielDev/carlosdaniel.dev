@@ -30,7 +30,9 @@ export const Container = styled.footer`
 
 export const InfoFooter = styled.div`
 	color: ${({ theme }) =>
-		theme.palette.textColorPrimary || theme.palette.buttonText};
+		theme.title === 'light'
+			? theme.palette.buttonText
+			: theme.palette.textColorPrimary || theme.palette.buttonText};
 	font-size: 1.2rem;
 	display: flex;
 	align-items: center;
@@ -47,6 +49,10 @@ export const InfoFooter = styled.div`
 export const FooterText = styled.span`
 	position: relative;
 	padding-left: 20px;
+	color: ${({ theme }) =>
+		theme.title === 'light'
+			? theme.palette.buttonText
+			: theme.palette.textColorPrimary || theme.palette.buttonText};
 
 	&::before {
 		content: '';
@@ -72,7 +78,8 @@ export const FooterText = styled.span`
 `;
 
 export const FooterLink = styled.a`
-	color: ${({ theme }) => theme.palette.primary};
+	color: ${({ theme }) =>
+		theme.title === 'light' ? '#4B7399' : theme.palette.primary};
 	text-decoration: none;
 	font-weight: bold;
 

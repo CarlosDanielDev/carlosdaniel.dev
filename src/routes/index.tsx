@@ -60,6 +60,7 @@ export const AppRoutes: React.FC = () => {
 								<Route path="/terminal" element={<P.Terminal />} />
 								<Route path="/to-japanese" element={<P.ToJapanese />} />
 								<Route path="/links" element={<P.Links />} />
+								<Route path="/about" element={<P.About />} />
 								<Route path="*" element={<P.NotFound />} />
 							</Routes>
 						</Main>

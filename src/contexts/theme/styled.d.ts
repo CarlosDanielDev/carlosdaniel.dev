@@ -4,13 +4,28 @@ declare module 'styled-components' {
 	export interface DefaultTheme {
 		title: string;
 		palette: {
+			textColorPrimary: Interpolation<
+				ThemedStyledProps<
+					Omit<
+						DetailedHTMLProps<HTMLAttributes<HTMLSpanElement>, HTMLSpanElement>,
+						'ref'
+					> & {
+						ref?:
+							| ((instance: HTMLSpanElement | null) => void)
+							| RefObject<HTMLSpanElement>
+							| null
+							| undefined;
+					},
+					DefaultTheme
+				>
+			>;
 			scanline: string;
 			terminal: SimpleInterpolation;
 			background: string;
 			backgroundHover: string;
 			title: string;
 			primary: string;
-			textColorPrimary: string;
+			textPrimary: string;
 			secondary: string;
 			placeholder: string;
 			shadow: string;

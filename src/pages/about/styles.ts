@@ -293,8 +293,6 @@ export const Status = styled.span`
 
 export const TerminalLink = styled.div`
 	margin-top: 20px;
-	display: flex;
-	gap: 16px;
 
 	a {
 		color: ${({ theme }) => theme.palette.primary};

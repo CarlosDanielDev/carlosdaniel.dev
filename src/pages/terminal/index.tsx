@@ -61,7 +61,7 @@ class TerminalManager {
 			home: t('terminal.home', 'Redirecting to standard view...'),
 			ls: t(
 				'terminal.ls',
-				'whoami\nskills\nprojects\nexperience\ncontact\nhelp\nhome\nclear',
+				'whoami\nskills\nprojects\nexperience\ncontact\nhelp\nhome\nabout\nclear',
 			),
 		};
 
@@ -70,6 +70,11 @@ class TerminalManager {
 			ls: () => availableTexts.ls,
 			clear: () => this.clearHistory(),
 			home: () => this.redirectHome(availableTexts.home),
+			about: () =>
+				this.redirectToPage(
+					'/about',
+					t('terminal.about', 'Redirecting to about page...'),
+				),
 			whoami: () => availableTexts.whoami,
 			skills: () => availableTexts.skills,
 			projects: () => availableTexts.projects,
@@ -90,7 +95,11 @@ class TerminalManager {
 - contact: ${this.t('terminal.commands.contact', 'Informações de contato')}
 - ls: ${this.t('terminal.commands.ls', 'Listar comandos disponíveis')}
 - clear: ${this.t('terminal.commands.clear', 'Limpar terminal')}
-- home: ${this.t('terminal.commands.home', 'Voltar para a página inicial')}`;
+- home: ${this.t('terminal.commands.home', 'Voltar para a página inicial')}
+- about: ${this.t(
+			'terminal.commands.about',
+			'Ver página detalhada sobre mim',
+		)}`;
 	}
 
 	private updateState(newState: Partial<TerminalState>): void {
@@ -115,6 +124,13 @@ class TerminalManager {
 	private redirectHome(message: string): string {
 		setTimeout(() => {
 			this.window.location.href = '/';
+		}, 1500);
+		return message;
+	}
+
+	private redirectToPage(path: string, message: string): string {
+		setTimeout(() => {
+			this.window.location.href = path;
 		}, 1500);
 		return message;
 	}

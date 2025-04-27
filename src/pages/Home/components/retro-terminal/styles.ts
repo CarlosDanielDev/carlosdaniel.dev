@@ -60,7 +60,10 @@ export const TerminalHeader = styled.div`
 export const TerminalTitle = styled.div`
 	font-size: 1.4rem;
 	font-weight: bold;
-	color: ${({ theme }) => theme.palette.primary || '#4ecca3'};
+	color: ${({ theme }) =>
+		theme.title === 'win98'
+			? theme.palette.terminalText || '#FFFFFF'
+			: theme.palette.primary || '#4ecca3'};
 `;
 
 export const TerminalContent = styled.div`
@@ -73,7 +76,10 @@ export const TerminalPrompt = styled.div`
 `;
 
 export const PromptUser = styled.span`
-	color: ${({ theme }) => theme.palette.primary || '#4ecca3'};
+	color: ${({ theme }) =>
+		theme.title === 'win98'
+			? theme.palette.terminalText || '#FFFFFF'
+			: theme.palette.primary || '#4ecca3'};
 	margin-right: 8px;
 `;
 
