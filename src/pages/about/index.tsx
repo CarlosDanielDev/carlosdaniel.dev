@@ -81,4 +81,4 @@ export const About: React.FC<AboutProps> = () => {
 			</S.Section>
 		</S.Wrapper>
 	);
-}; 
+};
